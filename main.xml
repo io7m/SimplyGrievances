@@ -623,7 +623,7 @@
             will be a book ID collision and the app will be confused as to which account the book belongs.
           </Paragraph>
           <Paragraph>
-            This could also, theoretically, cause Adobe DRM issues, as the wrong credentials will be used for book
+            This could also, theoretically, cause Adobe DRM issues as the wrong credentials will be used for book
             operations.
           </Paragraph>
           <Paragraph>
