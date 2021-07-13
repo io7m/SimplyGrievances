@@ -216,6 +216,7 @@
              tableOfContents="false">
       <Subsection title="Issues">
         <Subsection title="AutoValue AccountDescription"
+                    type="issue"
                     id="0715c1d4-e0b7-453a-973a-f1f4d6c372cc">
           <Paragraph>
             The <Term type="class">AccountDescription</Term> class is still using an
@@ -227,6 +228,7 @@
           </Paragraph>
         </Subsection>
         <Subsection title="AccountAuthenticationAdobeActivation Is Dead Code"
+                    type="issue"
                     id="eb1a3db3-729b-4fa5-8a78-13eba6996ac5">
           <Paragraph>
             The <Term type="class">AccountAuthenticationAdobeActivation</Term> class is not referenced anywhere in the
@@ -237,6 +239,7 @@
           </Paragraph>
         </Subsection>
         <Subsection title="Unused AccountProvider idNumeric Field"
+                    type="issue"
                     id="c677d10e-2085-4bbf-9385-14f9287ef0e7">
           <Paragraph>
             The <Term type="class">AccountProvider</Term> class exposes a (deprecated)
@@ -248,6 +251,7 @@
           </Paragraph>
         </Subsection>
         <Subsection title="AccountProviderAuthenticationDescription COPPA Check"
+                    type="issue"
                     id="b68437a4-97b2-401c-8a23-3fdda3e9f277">
           <Paragraph>
             Code exists in the <Term type="class">AccountProviderAuthenticationDescription</Term> class that performs
@@ -274,6 +278,7 @@
              tableOfContents="false">
       <Subsection title="Issues">
         <Subsection title="At-Least-One Account Limit"
+                    type="issue"
                     id="15c01b35-088a-45cb-a57a-035b531424ed">
           <Paragraph>
             For historical reasons, the accounts database requires that
@@ -321,7 +326,9 @@
     <Section title="simplified-accounts-json"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Unused annotationsURI Field">
+        <Subsection title="Unused annotationsURI Field"
+                    type="issue"
+                    id="b10e8b2c-b080-4042-b878-d92dc02db48f">
           <Paragraph>
             The <Term type="class">AccountProvidersJSON</Term> class contains code to read an
             <Term type="field">annotationsURI</Term>
@@ -399,6 +406,7 @@
       </Subsection>
       <Subsection title="Caches">
         <Subsection title="AccountProviderSourceNYPLRegistry"
+                    type="cache"
                     id="dec10980-6fb6-4fa6-ab4a-625cb040662e">
           <Paragraph>
             The <Term type="class">AccountProviderSourceNYPLRegistry</Term> class uses an HTTP client cache to cache the
@@ -434,7 +442,9 @@
     <Section title="simplified-adobe-extensions"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Obsolescence">
+        <Subsection title="Obsolescence"
+                    type="issue"
+                    id="32645ae4-e6be-44bb-aa2c-f98bdc2509a4">
           <Paragraph>
             The entire module consists of a Kotlin wrapper around a Java wrapper around the execrable Adobe DRM library.
             There is no part of the code that is not in some way unpleasant, and all three components should be removed
@@ -490,7 +500,9 @@
     <Section title="simplified-android-ktx"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Global Toolbar Use">
+        <Subsection title="Global Toolbar Use"
+                    type="issue"
+                    id="7ce15505-fe1b-4787-8a89-cd9d9aedcc30">
           <Paragraph>
             The extension functions in this module are designed to make it easier to get access to a global
             Android <Term type="term">action bar</Term>. Now that the Android
@@ -530,7 +542,9 @@
     <Section title="simplified-app-openebooks"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Outdated Manifest">
+        <Subsection title="Outdated Manifest"
+                    type="issue"
+                    id="df13d585-7f69-445f-a74a-9348541a6bdf">
           <Paragraph>
             The manifest permissions could do with auditing to see if all permissions are still actually used.
             Additionally, there are still references to the removed R1 activities.
@@ -552,7 +566,9 @@
     <Section title="simplified-app-simplye"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Outdated Manifest">
+        <Subsection title="Outdated Manifest"
+                    type="issue"
+                    id="4e99d7b9-f00f-452c-aeee-c70e383df103">
           <Paragraph>
             The manifest permissions could do with auditing to see if all permissions are still actually used.
             Additionally, there are still references to the removed R1 activities.
@@ -574,7 +590,9 @@
     <Section title="simplified-app-vanilla"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Outdated Manifest">
+        <Subsection title="Outdated Manifest"
+                    type="issue"
+                    id="9fb47a4f-e947-4aeb-90cf-9186f9f88f39">
           <Paragraph>
             The manifest permissions could do with auditing to see if all permissions are still actually used.
             Additionally, there are still references to the removed R1 activities.
@@ -596,7 +614,9 @@
     <Section title="simplified-books-api"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Book IDs Are Not Unique Enough">
+        <Subsection title="Book IDs Are Not Unique Enough"
+                    type="issue"
+                    id="33b42c1a-ad72-44df-814a-fac3d394b269">
           <Paragraph>
             Book IDs are used to uniquely identify books within the application. Book IDs are produced by hashing the
             OPDS identifiers of books within a feed. Unfortunately, if two accounts both publish the same book, there
@@ -630,7 +650,9 @@
     <Section title="simplified-books-audio"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Code Belongs Elsewhere">
+        <Subsection title="Code Belongs Elsewhere"
+                    type="issue"
+                    id="cfd401ac-dba8-485a-8fcc-b678219fced6">
           <Paragraph>
             Arguably, the code in this module represents an impedance mismatch between the desired audio book API and
             the API that actually exists. The code in this module is glue code, and ideally should not have to exist.
@@ -652,7 +674,9 @@
     <Section title="simplified-books-borrowing"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Book Subtask Ordering">
+        <Subsection title="Book Subtask Ordering"
+                    type="issue"
+                    id="28e9fe65-f398-4ccc-9582-fed71a3dbc0a">
           <Paragraph>
             Subtasks in the book borrowing code do not have any kind of priority ordering. A task is selected for
             execution if it matches the required <LinkExternal target="https://en.wikipedia.org/wiki/Media_type">
@@ -680,7 +704,9 @@
     <Section title="simplified-books-bundled-api"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Module Is Obsolete">
+        <Subsection title="Module Is Obsolete"
+                    type="issue"
+                    id="1636fac9-0dbe-47b0-b487-9e87b8e764e1">
           <Paragraph>
             This entire module is obsolete. The only consumer of this module was
             <LinkExternal target="https://libraryforall.org/">Library For All</LinkExternal>, and they no longer use
@@ -719,7 +745,9 @@
     <Section title="simplified-viewer-epub-readium2"
              tableOfContents="false">
       <Subsection title="Issues">
-        <Subsection title="Page Turn Events">
+        <Subsection title="Page Turn Events"
+                    type="issue"
+                    id="1884f133-2de6-4795-bd62-6969b9c973c0">
           <Paragraph>
             The viewer fails to publish <Term type="term">page turned</Term> events to the
             <Link target="497abe8b-113b-4bbb-8aaf-5f9da08ce484">analytics API</Link>. This is an oversight.
