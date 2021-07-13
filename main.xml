@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Document xmlns="urn:com.io7m.structural:8:0"
+          xmlns:dc="http://purl.org/dc/elements/1.1/"
+          tableOfContentsDepth="1">
+
+  <Metadata>
+    <dc:creator>Mark Raynsford</dc:creator>
+    <dc:date>2021-07-08T19:42:35Z</dc:date>
+    <dc:identifier>af39eadf-9d6a-42bf-91e2-a864b5dcf6b7</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:rights>Public Domain</dc:rights>
+    <dc:title>Simply Grievances: Problems With The Library Simplified Android Codebase</dc:title>
+
+    <MetaProperty name="com.io7m.xstructural.epub.colophon">colophon.xml</MetaProperty>
+    <MetaProperty name="com.io7m.xstructural.epub.cover">bookCover.jpg</MetaProperty>
+    <MetaProperty name="com.io7m.xstructural.web.branding.header">brand.xml</MetaProperty>
+    <MetaProperty name="com.io7m.xstructural.web.branding.footer">brand.xml</MetaProperty>
+  </Metadata>
+
+  <Section title="Orientation">
+    <Paragraph>
+      This book represents a comprehensive examination of the issues with the <Term type="term">Library Simplified
+    </Term> Android client codebases. Specifically, problems are documented for the following codebases:
+    </Paragraph>
+    <FormalItem title="Documented Codebases">
+      <ListUnordered>
+        <Item>
+          <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core">Simplified-Android-Core
+          </LinkExternal>
+        </Item>
+        <Item>
+          <LinkExternal target="https://github.com/NYPL-Simplified/audiobook-android">audiobook-android</LinkExternal>
+        </Item>
+        <Item>
+          <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-R2-Android">Simplified-R2-Android
+          </LinkExternal>
+        </Item>
+      </ListUnordered>
+    </FormalItem>
+    <Paragraph>
+      The <Link target="ec5b77d0-2fed-4e6a-b56c-c381d21b97be">Issue Classes</Link> section documents the classes of
+      issues seen in all of the codebases, and the
+      <Link target="104c09e6-6870-4981-b151-438d74b891ac">Modules</Link>
+      section describes specific instances of the issues in each module.
+    </Paragraph>
+    <Paragraph>
+      Additionally, this book attempts to identify all <Term type="term">caches</Term> used in the applications, because
+      caches are typically a source of many problems.
+    </Paragraph>
+  </Section>
+
+  <Section title="Issue Classes"
+           id="ec5b77d0-2fed-4e6a-b56c-c381d21b97be">
+    <Subsection title="Overview">
+      <Paragraph>
+        Many issues within the codebases belong to <Term type="term">classes</Term> of issues rather than being
+        specific, one-off issues. The following sections attempt to describe those classes of issues so that the
+        documentation sections for each module in the codebase can link to the definitions rather than repeating them.
+      </Paragraph>
+    </Subsection>
+    <Subsection title="Issue Class: AUTOVALUE"
+                id="49489ee8-17ee-49c1-98b2-ce387af0cf24">
+      <Paragraph>
+        When the codebases were primarily written in Java, the ancient version of Java provided on Android made it very
+        labour intensive to write <Term type="term">data classes</Term>. A
+        <Term type="term">data class</Term>
+        is essentially a class used to hold immutable data and has no "behaviour". Writing these by hand in the ancient
+        Java version available on Android means writing lots of methods by hand in order to get pleasant behaviour with
+        regards to comparing values of the classes for equality, hashing values of the class to insert into maps and
+        sets, and printing values of the classes during debugging. The
+        <LinkExternal target="https://github.com/google/auto/">Google AutoValue</LinkExternal>
+        package provides annotations to generate data classes without having to manually write all of the boilerplate.
+        However, nowadays, the Android codebases have moved to using Kotlin as the primary implementation language, and
+        the language has direct support for writing data classes without needing an external library. The issue here is
+        that the various codebases do still have some old <Term type="class">AutoValue</Term>-generated Java classes,
+        and haven't migrated to plain Kotlin data classes.
+      </Paragraph>
+    </Subsection>
+    <Subsection title="Issue Class: BUG"
+                id="f454641e-95b4-4513-b856-6dce9952c6ba">
+      <Paragraph>
+        This class of issue simply describes known bugs. There will typically be a ticket associated with each instance
+        of this class of issue.
+      </Paragraph>
+    </Subsection>
+    <Subsection title="Issue Class: COMPLEX"
+                id="33d4dc0c-45f1-4b3b-bad8-019fbcbcca78">
+      <Paragraph>
+        This class of issue describes code that is unnecessarily complex. This is often a historical artifact; code may
+        have been written to support use cases that stopped being relevant, but the code was never refactored to remove
+        the now unnecessary parts.
+      </Paragraph>
+    </Subsection>
+    <Subsection title="Issue Class: DEADCODE"
+                id="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">
+      <Paragraph>
+        This class of issue describes code that can be statically determined to be unused. This class of issue can
+        normally be fixed with trivial refactoring, or even directly by the IDE.
+      </Paragraph>
+    </Subsection>
+    <Subsection title="Issue Class: DESIGN"
+                id="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">
+      <Paragraph>
+        This class of issue describes code that is fundamentally flawed in its approach. Most code with an issue of this
+        class will need to be completely redesigned and rewritten.
+      </Paragraph>
+    </Subsection>
+    <Subsection title="Issue Class: LIFECYCLE"
+                id="c5636f09-f0af-46ca-8993-0c694f2e76d4">
+      <Paragraph>
+        This class of issue describes code that breaks when subjected to events occurring as part of the obscenely
+        complex and
+        unnecessary <LinkExternal target="https://developer.android.com/guide/components/activities/activity-lifecycle">
+        Android Lifecycle model</LinkExternal>. Code with this class of issue could be said to have a
+        <Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">design flaw</Link>, but the issue is often severe enough
+        that having a separate class of issue to track problems is warranted.
+      </Paragraph>
+    </Subsection>
+    <Subsection title="Issue Class: OBSOLETE"
+                id="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">
+      <Paragraph>
+        This class of issue describes code that has become unnecessary due to some changes of circumstance.
+      </Paragraph>
+    </Subsection>
+    <Subsection title="Issue Class: STYLE">
+      <Paragraph>
+        This class of issue describes code style issues. These are often trivial issues and can often be corrected
+        mechanically.
+      </Paragraph>
+    </Subsection>
+    <Subsection title="Issue Class: UITHREAD">
+      <Paragraph>
+        This class of issue describes a subset of
+        <Link target="c5636f09-f0af-46ca-8993-0c694f2e76d4">lifecycle</Link>
+        issues that are specific to a programming approach used throughout the codebase.
+      </Paragraph>
+      <Paragraph>
+        The Android UI is single-threaded in the sense that all updates made to UI elements onscreen must be made by
+        code running on the <Term type="term">Android UI thread</Term>. Code must not
+        <Term type="term">block</Term>
+        on the UI thread (ie. run or wait for a long period of time without terminating) because this will cause the UI
+        to become unresponsive and may result in the system offering to kill the application. This means that if a long
+        running operation must occur (such as sending a request to a server and waiting for the response), the operation
+        must be scheduled to run on a background thread. Of course, most long-running operations perform actions such as
+        publishing status updates; an operation might periodically publish updates that indicate for how much longer the
+        operation is likely to continue running. Because it's only possible to update a user interface from the UI
+        thread, it's therefore necessary to have some way for a background thread to schedule code that will run on the
+        UI thread at the earliest possible opportunity after a status update is published.
+      </Paragraph>
+      <Paragraph>
+        Briefly, the class of issue described here arises from code being scheduled to run on the UI thread that carries
+        a reference to a UI element, but the Android UI system destroys the UI element before the code is allowed to
+        run. The code then runs as scheduled, but crashes the app because the UI element has been invalidated. This is
+        commonly seen where a long-running background operation publishes events to indicate the state of the operation,
+        and code is scheduled to run on the UI thread in response to these events in order to perform operations such as
+        updating onscreen progress bars, and etc.
+      </Paragraph>
+      <FormalItem title="UI Thread Crash">
+        <Image source="ui_thread.png">A UI thread crash</Image>
+      </FormalItem>
+      <Paragraph>
+        This, sadly, is a fundamental design flaw in Android (and the entire lifecycle system is also arguably a
+        fundamental design flaw). The above is a common design pattern used in all other UI libraries (such
+        as <LinkExternal target="https://en.wikipedia.org/wiki/Swing_(Java)">Swing</LinkExternal>,
+        <LinkExternal target="https://openjfx.io/">JavaFX</LinkExternal>,
+        <LinkExternal target="https://www.gtk.org/">GTK</LinkExternal>,
+        <LinkExternal target="https://www.qt.io/">QT</LinkExternal>, various
+        <LinkExternal target="https://en.wikipedia.org/wiki/.NET_Framework">.NET</LinkExternal>
+        UI systems, and so on. The main design flaw in this case is that the Android system is allowed to execute code
+        on the UI thread <Term type="term">before the user-scheduled UI code can run</Term>. Even on other systems that
+        are allowed to invalidate UI elements in this manner, operations on invalid UI elements are simply treated as <Term type="term">
+        no-ops
+      </Term> and simply do not cause crashes.
+      </Paragraph>
+      <Paragraph>
+        The primary method that we've started to use instead is to force events to be delivered onto the UI thread, and
+        code can execute immediately on the UI thread to respond to them, rather than code being scheduled to run later.
+        We've
+        <LinkFootnote target="c16f4f1e-08a0-4a83-8da2-62a82173aa15"/>
+        used the scheduling methods provided by
+        <LinkExternal target="https://github.com/ReactiveX/RxAndroid">RxAndroid</LinkExternal>
+        to control event streams in most cases.
+      </Paragraph>
+    </Subsection>
+
+    <Footnote id="c16f4f1e-08a0-4a83-8da2-62a82173aa15">
+      "We" largely meaning Quentin Gliosca. The author of this book can only take credit for causing the original
+      problem due to being under the mistaken impression that the Android UI system
+      <Term type="emphatic">wasn't</Term>
+      broken.
+    </Footnote>
+  </Section>
+
+  <Section title="Modules"
+           id="104c09e6-6870-4981-b151-438d74b891ac"
+           tableOfContentsDepth="1">
+
+    <Section title="simplified-accessibility"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accessibility">
+          simplified-accessibility</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-accounts-api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="AutoValue AccountDescription"
+                    id="0715c1d4-e0b7-453a-973a-f1f4d6c372cc">
+          <Paragraph>
+            The <Term type="class">AccountDescription</Term> class is still using an
+            <Term type="class">AutoValue</Term>
+            generated type.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="49489ee8-17ee-49c1-98b2-ce387af0cf24">AUTOVALUE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+        <Subsection title="AccountAuthenticationAdobeActivation Is Dead Code"
+                    id="eb1a3db3-729b-4fa5-8a78-13eba6996ac5">
+          <Paragraph>
+            The <Term type="class">AccountAuthenticationAdobeActivation</Term> class is not referenced anywhere in the
+            codebase and can be deleted.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+        <Subsection title="Unused AccountProvider idNumeric Field"
+                    id="c677d10e-2085-4bbf-9385-14f9287ef0e7">
+          <Paragraph>
+            The <Term type="class">AccountProvider</Term> class exposes a (deprecated)
+            <Term type="field">idNumeric</Term>
+            field that has not been used in the application since version 3.0.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+        <Subsection title="AccountProviderAuthenticationDescription COPPA Check"
+                    id="b68437a4-97b2-401c-8a23-3fdda3e9f277">
+          <Paragraph>
+            Code exists in the <Term type="class">AccountProviderAuthenticationDescription</Term> class that performs
+            "age is over 13" checks for the COPPA age gate. Unfortunately, due to multiple instances of
+            miscommunication, this check actually takes place in some new UI code and the code in the original class
+            goes unused.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-api">
+          simplified-accounts-api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-accounts-database"
+             id="19cdf946-6f34-4d7a-aa0b-bbcd8f9e18d7"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="At-Least-One Account Limit"
+                    id="15c01b35-088a-45cb-a57a-035b531424ed">
+          <Paragraph>
+            For historical reasons, the accounts database requires that
+            <Term type="term">at least one</Term>
+            account must exist at any given time. This is because the support for multiple accounts was added (badly) in
+            version 2.0 of the application, and was rewritten from the ground up for the
+            <LinkExternal target="https://libraryforall.org/">Library For All</LinkExternal>
+            fork of the codebase without there being resources available to redesign the UI to properly support multiple
+            (or zero) accounts. The simplest way to avoid having to do the UI work was to ensure that at least one
+            account was always available for the UI to display.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</Link>. Severity: Moderate.
+          </Paragraph>
+          <Paragraph>
+            Relevant tickets: <LinkExternal target="https://jira.nypl.org/browse/SMA-173">SMA-173</LinkExternal>.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-database">
+          simplified-accounts-database</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-accounts-database-api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-database-api">
+          simplified-accounts-database-api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-accounts-json"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Unused annotationsURI Field">
+          <Paragraph>
+            The <Term type="class">AccountProvidersJSON</Term> class contains code to read an
+            <Term type="field">annotationsURI</Term>
+            field from serialized accounts. This field has not been used for quite a while due to the annotations URI
+            being retrieved from the authentication document in modern versions of the application.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-json">
+          simplified-accounts-json</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-accounts-registry"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-registry">
+          simplified-accounts-registry</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-accounts-registry-api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-registry-api">
+          simplified-accounts-registry-api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-accounts-source-filebased"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-source-filebased">
+          simplified-accounts-source-filebased</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-accounts-source-nyplregistry"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Caches">
+        <Subsection title="AccountProviderSourceNYPLRegistry"
+                    id="dec10980-6fb6-4fa6-ab4a-625cb040662e">
+          <Paragraph>
+            The <Term type="class">AccountProviderSourceNYPLRegistry</Term> class uses an HTTP client cache to cache the
+            result of retrieving accounts from the registry for four hours.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-source-nyplregistry">
+          simplified-accounts-source-nyplregistry</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-accounts-source-spi"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-source-spi">
+          simplified-accounts-source-spi</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-adobe-extensions"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Obsolescence">
+          <Paragraph>
+            The entire module consists of a Kotlin wrapper around a Java wrapper around the execrable Adobe DRM library.
+            There is no part of the code that is not in some way unpleasant, and all three components should be removed
+            from the application at the earliest opportunity.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="33d4dc0c-45f1-4b3b-bad8-019fbcbcca78">COMPLEX</Link>. Severity: Moderate.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-adobe-extensions">
+          simplified-adobe-extensions</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-analytics-api"
+             id="497abe8b-113b-4bbb-8aaf-5f9da08ce484"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-analytics-api">
+          simplified-analytics-api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-analytics-circulation"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-analytics-circulation">
+          simplified-analytics-circulation</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-android-ktx"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Global Toolbar Use">
+          <Paragraph>
+            The extension functions in this module are designed to make it easier to get access to a global
+            Android <Term type="term">action bar</Term>. Now that the Android
+            <Term type="class">Toolbar</Term>
+            class exists, the application should arguably not be using a global action bar anymore.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-android-ktx">
+          simplified-android-ktx</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-announcements"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-announcements">
+          simplified-announcements</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-app-openebooks"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Outdated Manifest">
+          <Paragraph>
+            The manifest permissions could do with auditing to see if all permissions are still actually used.
+            Additionally, there are still references to the removed R1 activities.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-app-openebooks">
+          simplified-app-openebooks</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-app-simplye"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Outdated Manifest">
+          <Paragraph>
+            The manifest permissions could do with auditing to see if all permissions are still actually used.
+            Additionally, there are still references to the removed R1 activities.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-app-simplye">
+          simplified-app-simplye</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-app-vanilla"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Outdated Manifest">
+          <Paragraph>
+            The manifest permissions could do with auditing to see if all permissions are still actually used.
+            Additionally, there are still references to the removed R1 activities.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-app-vanilla">
+          simplified-app-vanilla</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-books-api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Book IDs Are Not Unique Enough">
+          <Paragraph>
+            Book IDs are used to uniquely identify books within the application. Book IDs are produced by hashing the
+            OPDS identifiers of books within a feed. Unfortunately, if two accounts both publish the same book, there
+            will be a book ID collision and the app will be confused as to which account the book belongs.
+          </Paragraph>
+          <Paragraph>
+            This could also, theoretically, cause Adobe DRM issues, as the wrong credentials will be used for book
+            operations.
+          </Paragraph>
+          <Paragraph>
+            Relevant issues: <LinkExternal target="https://jira.nypl.org/browse/SMA-33">SMA-33</LinkExternal>.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</Link>. Severity: Critical.
+          </Paragraph>
+          <Paragraph>
+            Proposed solution: Combine the hash of the OPDS identifier and book account ID in order to produce a truly
+            unique value.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-books-api">
+          simplified-books-api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-books-audio"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Code Belongs Elsewhere">
+          <Paragraph>
+            Arguably, the code in this module represents an impedance mismatch between the desired audio book API and
+            the API that actually exists. The code in this module is glue code, and ideally should not have to exist.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-books-audio">
+          simplified-books-audio</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-books-borrowing"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Book Subtask Ordering">
+          <Paragraph>
+            Subtasks in the book borrowing code do not have any kind of priority ordering. A task is selected for
+            execution if it matches the required <LinkExternal target="https://en.wikipedia.org/wiki/Media_type">
+            media type</LinkExternal>, and the first matching subtask is used. This means that if there are multiple
+            subtasks that support a given media type, the subtask is selected nondeterministically. Ideally, subtasks
+            would specify some kind of priority ordering to allow overriding another known task.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</Link>. Severity: Minor.
+          </Paragraph>
+          <Paragraph>
+            Relevant issues: <LinkExternal target="https://jira.nypl.org/browse/SMA-153">SMA-153</LinkExternal>.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-books-borrowing">
+          simplified-books-borrowing</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-books-bundled-api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Module Is Obsolete">
+          <Paragraph>
+            This entire module is obsolete. The only consumer of this module was
+            <LinkExternal target="https://libraryforall.org/">Library For All</LinkExternal>, and they no longer use
+            this method of inserting books into the application.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-books-bundled-api">
+          simplified-books-bundled-api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-books-controller"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-books-controller">
+          simplified-books-controller</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="simplified-viewer-epub-readium2"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Page Turn Events">
+          <Paragraph>
+            The viewer fails to publish <Term type="term">page turned</Term> events to the
+            <Link target="497abe8b-113b-4bbb-8aaf-5f9da08ce484">analytics API</Link>. This is an oversight.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="f454641e-95b4-4513-b856-6dce9952c6ba">COMPLEX</Link>. Severity: Moderate.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-analytics-api">
+          simplified-analytics-api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+  </Section>
+
+</Document>
