@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <meta http-equiv="content-type"
+            content="application/xhtml+xml; charset=utf-8"/>
+      <meta name="generator" content="com.io7m.xstructural/1.3.0-SNAPSHOT"/>
+      <link rel="stylesheet" type="text/css" href="reset.css"/>
+      <link rel="stylesheet" type="text/css" href="structural.css"/>
+      <link rel="stylesheet" type="text/css" href="document.css"/>
+      <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+      <meta name="DC.Creator" content="Mark Raynsford"/>
+      <meta name="DC.Date" content="2021-07-08T19:42:35Z"/>
+      <meta name="DC.Identifier" content="af39eadf-9d6a-42bf-91e2-a864b5dcf6b7"/>
+      <meta name="DC.Language" content="en"/>
+      <meta name="DC.Rights" content="Public Domain"/>
+      <meta name="DC.Title"
+            content="Simply Grievances: Problems With The Library Simplified Android Codebase"/>
+      <title>Simply Grievances: Problems With The Library Simplified Android Codebase: 5.26. org.librarysimplified.audiobook.views</title>
+   </head>
+   <body><!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+      <div class="stNavigationHeader">
+         <div class="stNavigationHeaderPrevTitle">5.25. org.librarysimplified.audiobook.tests.sandbox</div>
+         <div class="stNavigationHeaderPrevLink">
+            <a href="d0e2565.xhtml" title="d0e2565.xhtml#d0e2565" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationHeaderUpTitle">5. Modules</div>
+         <div class="stNavigationHeaderUpLink">
+            <a href="d0e2081.xhtml"
+               title="d0e2081.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationHeaderNextTitle">5.27. org.librarysimplified.r2.api</div>
+         <div class="stNavigationHeaderNextLink">
+            <a href="d0e2665.xhtml" title="d0e2665.xhtml#d0e2665" rel="next">Next</a>
+         </div>
+      </div>
+      <div class="stMain">
+         <div class="stRegion stSection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h1 class="stSectionTitle">
+                  <a id="d0e2582"
+                     href="#d0e2582"
+                     title="Section 5.26: org.librarysimplified.audiobook.views">5.26. org.librarysimplified.audiobook.views</a>
+               </h1>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.26.1: Issues"
+                     id="d0e2584"
+                     href="#d0e2584">5.26.1. Issues</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.26.1.1: PlayerFragment Uses UIThread"
+                     id="id_d3f400b8-b27b-4b6e-8243-06d6a89a11a2"
+                     href="#id_d3f400b8-b27b-4b6e-8243-06d6a89a11a2">5.26.1.1. PlayerFragment Uses UIThread</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2588"
+                  href="#d0e2588"
+                  title="Paragraph 5.26.1.1.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The <span class="stTerm class">PlayerFragment</span> class uses the
+            <a class="stLink"
+                  href="d0e79.xhtml#id_5955c72f-6d78-40d2-89b0-57649ca0aff8"
+                  title="Subsection 2.10: Issue Class: UITHREAD">fundamentally flawed UI thread</a>
+            API.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2597"
+                  href="#d0e2597"
+                  title="Paragraph 5.26.1.1.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_5955c72f-6d78-40d2-89b0-57649ca0aff8"
+                  title="Subsection 2.10: Issue Class: UITHREAD">UITHREAD</a>. Severity: Critical.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.26.1.2: Activity Listeners"
+                     id="id_4f7aff4d-4619-4b9e-9916-38f81be64bdb"
+                     href="#id_4f7aff4d-4619-4b9e-9916-38f81be64bdb">5.26.1.2. Activity Listeners</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2606"
+                  href="#d0e2606"
+                  title="Paragraph 5.26.1.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The hosting Activity must communicate with Fragments using old-style callback functions. This should be
+            replaced with communcation via a ViewModel (the Audio Book library predates ViewModels).
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2608"
+                  href="#d0e2608"
+                  title="Paragraph 5.26.1.2.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_ade6440a-e336-4ec5-9000-6a4c6fb64a4c"
+                  title="Subsection 2.9: Issue Class: STYLE">STYLE</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.26.1.3: Designed By Committee TOC"
+                     id="id_e9875073-cefc-4aba-a806-36829f3bf993"
+                     href="#id_e9875073-cefc-4aba-a806-36829f3bf993">5.26.1.3. Designed By Committee TOC</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2617"
+                  href="#d0e2617"
+                  title="Paragraph 5.26.1.3.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The design for the table of contents UI was essentially put together via a committee and has numerous
+            shortcomings. Firstly, it is aesthetically ugly. Secondly, there is no way for users to see details of any
+            errors that may occur when downloading chapters. This harms the ability of developers to debug issues.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2619"
+                  href="#d0e2619"
+                  title="Paragraph 5.26.1.3.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Major.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.26.1.4: Player Colors Taken From Theme"
+                     id="id_bdcd5bd3-824e-47ae-a24e-1f05fa5d0578"
+                     href="#id_bdcd5bd3-824e-47ae-a24e-1f05fa5d0578">5.26.1.4. Player Colors Taken From Theme</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2628"
+                  href="#d0e2628"
+                  title="Paragraph 5.26.1.4.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The Audio Book player UI takes colors from the current application theme. This may present difficulties if
+            the application wants to move to a partially dynamic, neutral color scheme.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2630"
+                  href="#d0e2630"
+                  title="Paragraph 5.26.1.4.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.26.1.5: Audio Player Can Delete Accounts"
+                     id="id_22d34626-0878-4cc0-91aa-60eadf88cb9d"
+                     href="#id_22d34626-0878-4cc0-91aa-60eadf88cb9d">5.26.1.5. Audio Player Can Delete Accounts</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2639"
+                  href="#d0e2639"
+                  title="Paragraph 5.26.1.5.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            A serious and as-yet-unexplained bug appears to be present in the audio book player where exiting an audio
+            book can delete or corrupt the application account containing the audio book.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2641"
+                  href="#d0e2641"
+                  title="Paragraph 5.26.1.5.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_f454641e-95b4-4513-b856-6dce9952c6ba"
+                  title="Subsection 2.3: Issue Class: BUG">BUG</a>. Severity: Critical.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2647"
+                  href="#d0e2647"
+                  title="Paragraph 5.26.1.5.3">3</a>
+            </div>
+            <div class="stRegionContent">
+            Relevant issues: <a class="stLinkExternal"
+                  href="https://www.notion.so/lyrasis/5694f5b2d40c4baea0d97782a3141cef"
+                  title="https://www.notion.so/lyrasis/5694f5b2d40c4baea0d97782a3141cef">
+            https://www.notion.so/lyrasis/5694f5b2d40c4baea0d97782a3141cef</a>.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.26.2: Module Link"
+                     id="d0e2655"
+                     href="#d0e2655">5.26.2. Module Link</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e2657"
+                  href="#d0e2657"
+                  title="Paragraph 5.26.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+          The module can be found
+          at <a class="stLinkExternal"
+                  href="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.views"
+                  title="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.views">
+          org.librarysimplified.audiobook.views</a>.
+        </div>
+         </div>
+      </div>
+      <div class="stNavigationFooter">
+         <div class="stNavigationFooterPrevTitle">5.25. org.librarysimplified.audiobook.tests.sandbox</div>
+         <div class="stNavigationFooterPrevLink">
+            <a href="d0e2565.xhtml" title="d0e2565.xhtml#d0e2565" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationFooterUpTitle">5. Modules</div>
+         <div class="stNavigationFooterUpLink">
+            <a href="d0e2081.xhtml"
+               title="d0e2081.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationFooterNextTitle">5.27. org.librarysimplified.r2.api</div>
+         <div class="stNavigationFooterNextLink">
+            <a href="d0e2665.xhtml" title="d0e2665.xhtml#d0e2665" rel="next">Next</a>
+         </div>
+      </div>
+      <!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+   </body>
+</html>

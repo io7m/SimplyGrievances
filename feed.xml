@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>urn:uuid:17ccb463-9bf8-4c04-8c33-1d572ccd2802</id>
+  <title>Simply Grievances</title>
+  <updated>2000-01-01T00:00:00+00:00</updated>
+
+  <entry>
+    <id>urn:uuid:fe912b66-caab-4781-8a64-b10a7c59b0b5</id>
+    <title>Simply Grievances</title>
+    <updated>2000-01-01T00:00:00+00:00</updated>
+
+    <summary type="html">
+      A book documenting the issues present in the Library Simplified Android codebases.
+    </summary>
+
+    <link href="bookCover.jpg"
+          type="image/jpeg"
+          rel="http://opds-spec.org/image"/>
+    <link href="simplyGrievances.epub"
+          rel="http://opds-spec.org/acquisition/open-access"
+          type="application/epub+zip"/>
+  </entry>
+</feed>

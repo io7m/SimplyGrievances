@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <meta http-equiv="content-type"
+            content="application/xhtml+xml; charset=utf-8"/>
+      <meta name="generator" content="com.io7m.xstructural/1.3.0-SNAPSHOT"/>
+      <link rel="stylesheet" type="text/css" href="reset.css"/>
+      <link rel="stylesheet" type="text/css" href="structural.css"/>
+      <link rel="stylesheet" type="text/css" href="document.css"/>
+      <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+      <meta name="DC.Creator" content="Mark Raynsford"/>
+      <meta name="DC.Date" content="2021-07-08T19:42:35Z"/>
+      <meta name="DC.Identifier" content="af39eadf-9d6a-42bf-91e2-a864b5dcf6b7"/>
+      <meta name="DC.Language" content="en"/>
+      <meta name="DC.Rights" content="Public Domain"/>
+      <meta name="DC.Title"
+            content="Simply Grievances: Problems With The Library Simplified Android Codebase"/>
+      <title>Simply Grievances: Problems With The Library Simplified Android Codebase: 5.76. simplified-main</title>
+   </head>
+   <body><!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+      <div class="stNavigationHeader">
+         <div class="stNavigationHeaderPrevTitle">5.75. simplified-links-json</div>
+         <div class="stNavigationHeaderPrevLink">
+            <a href="d0e4022.xhtml" title="d0e4022.xhtml#d0e4022" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationHeaderUpTitle">5. Modules</div>
+         <div class="stNavigationHeaderUpLink">
+            <a href="d0e2081.xhtml"
+               title="d0e2081.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationHeaderNextTitle">5.77. simplified-metrics</div>
+         <div class="stNavigationHeaderNextLink">
+            <a href="d0e4123.xhtml" title="d0e4123.xhtml#d0e4123" rel="next">Next</a>
+         </div>
+      </div>
+      <div class="stMain">
+         <div class="stRegion stSection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h1 class="stSectionTitle">
+                  <a id="d0e4039" href="#d0e4039" title="Section 5.76: simplified-main">5.76. simplified-main</a>
+               </h1>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.76.1: Issues"
+                     id="d0e4041"
+                     href="#d0e4041">5.76.1. Issues</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.76.1.1: MainServices Class Is Too Large"
+                     id="id_221abbfc-e0f0-4544-bc49-095972cc1c85"
+                     href="#id_221abbfc-e0f0-4544-bc49-095972cc1c85">5.76.1.1. MainServices Class Is Too Large</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4045"
+                  href="#d0e4045"
+                  title="Paragraph 5.76.1.1.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The <span class="stTerm class">MainServices</span> class that instantiates all of the application services is too
+            large and should be broken up into separate classes. This issue relates to a
+            <a class="stLink"
+                  href="d0e3714.xhtml#id_1e366182-6afa-434d-b549-548696b7a7f1"
+                  title="Subsection 5.63.1.1: Lacking General Service Registration">lack of a general service registration mechanism</a>.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4054"
+                  href="#d0e4054"
+                  title="Paragraph 5.76.1.1.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_33d4dc0c-45f1-4b3b-bad8-019fbcbcca78"
+                  title="Subsection 2.4: Issue Class: COMPLEX">COMPLEX</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.76.1.2: UI Thread Service Fundamentally Flawed"
+                     id="id_7e236a16-1377-4ad3-b279-6e0fee906fc7"
+                     href="#id_7e236a16-1377-4ad3-b279-6e0fee906fc7">5.76.1.2. UI Thread Service Fundamentally Flawed</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4063"
+                  href="#d0e4063"
+                  title="Paragraph 5.76.1.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The <span class="stTerm class">MainUIThreadService</span> class is
+            <a class="stLink"
+                  href="d0e79.xhtml#id_5955c72f-6d78-40d2-89b0-57649ca0aff8"
+                  title="Subsection 2.10: Issue Class: UITHREAD">fundamentally flawed</a>
+            and should be removed.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4072"
+                  href="#d0e4072"
+                  title="Paragraph 5.76.1.2.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_5955c72f-6d78-40d2-89b0-57649ca0aff8"
+                  title="Subsection 2.10: Issue Class: UITHREAD">UITHREAD</a>. Severity: Critical.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.76.1.3: MainBundledContentResolver"
+                     id="id_80d73952-b597-4f35-b16e-dc286efee2fa"
+                     href="#id_80d73952-b597-4f35-b16e-dc286efee2fa">5.76.1.3. MainBundledContentResolver</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4081"
+                  href="#d0e4081"
+                  title="Paragraph 5.76.1.3.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The <span class="stTerm class">MainBundledContentResolver</span> class is no longer useful as noone is using bundled
+            content in the application anymore.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4087"
+                  href="#d0e4087"
+                  title="Paragraph 5.76.1.3.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_dac29d65-63f0-4a76-b4ce-5dcc88320a5d"
+                  title="Subsection 2.8: Issue Class: OBSOLETE">OBSOLETE</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.76.1.4: Global Toolbar Handling"
+                     id="id_08ed448b-033d-4ba3-b8b1-5f866f9fa059"
+                     href="#id_08ed448b-033d-4ba3-b8b1-5f866f9fa059">5.76.1.4. Global Toolbar Handling</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4096"
+                  href="#d0e4096"
+                  title="Paragraph 5.76.1.4.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The application should probably <a class="stLink"
+                  href="d0e3114.xhtml#id_7ce15505-fe1b-4787-8a89-cd9d9aedcc30"
+                  title="Subsection 5.46.1.1: Global Toolbar Use">not be using a global
+            action bar</a>. A per-tab <span class="stTerm class">Toolbar</span> should probably be used instead.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4105"
+                  href="#d0e4105"
+                  title="Paragraph 5.76.1.4.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_dac29d65-63f0-4a76-b4ce-5dcc88320a5d"
+                  title="Subsection 2.8: Issue Class: OBSOLETE">OBSOLETE</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.76.2: Module Link"
+                     id="d0e4113"
+                     href="#d0e4113">5.76.2. Module Link</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4115"
+                  href="#d0e4115"
+                  title="Paragraph 5.76.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+          The module can be found
+          at <a class="stLinkExternal"
+                  href="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-main"
+                  title="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-main">
+          simplified-main</a>.
+        </div>
+         </div>
+      </div>
+      <div class="stNavigationFooter">
+         <div class="stNavigationFooterPrevTitle">5.75. simplified-links-json</div>
+         <div class="stNavigationFooterPrevLink">
+            <a href="d0e4022.xhtml" title="d0e4022.xhtml#d0e4022" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationFooterUpTitle">5. Modules</div>
+         <div class="stNavigationFooterUpLink">
+            <a href="d0e2081.xhtml"
+               title="d0e2081.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationFooterNextTitle">5.77. simplified-metrics</div>
+         <div class="stNavigationFooterNextLink">
+            <a href="d0e4123.xhtml" title="d0e4123.xhtml#d0e4123" rel="next">Next</a>
+         </div>
+      </div>
+      <!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+   </body>
+</html>

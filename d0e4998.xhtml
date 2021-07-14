@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <meta http-equiv="content-type"
+            content="application/xhtml+xml; charset=utf-8"/>
+      <meta name="generator" content="com.io7m.xstructural/1.3.0-SNAPSHOT"/>
+      <link rel="stylesheet" type="text/css" href="reset.css"/>
+      <link rel="stylesheet" type="text/css" href="structural.css"/>
+      <link rel="stylesheet" type="text/css" href="document.css"/>
+      <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+      <meta name="DC.Creator" content="Mark Raynsford"/>
+      <meta name="DC.Date" content="2021-07-08T19:42:35Z"/>
+      <meta name="DC.Identifier" content="af39eadf-9d6a-42bf-91e2-a864b5dcf6b7"/>
+      <meta name="DC.Language" content="en"/>
+      <meta name="DC.Rights" content="Public Domain"/>
+      <meta name="DC.Title"
+            content="Simply Grievances: Problems With The Library Simplified Android Codebase"/>
+      <title>Simply Grievances: Problems With The Library Simplified Android Codebase: 5.114. simplified-ui-catalog</title>
+   </head>
+   <body><!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+      <div class="stNavigationHeader">
+         <div class="stNavigationHeaderPrevTitle">5.113. simplified-ui-branding</div>
+         <div class="stNavigationHeaderPrevLink">
+            <a href="d0e4980.xhtml" title="d0e4980.xhtml#d0e4980" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationHeaderUpTitle">5. Modules</div>
+         <div class="stNavigationHeaderUpLink">
+            <a href="d0e2081.xhtml"
+               title="d0e2081.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationHeaderNextTitle">5.115. simplified-ui-errorpage</div>
+         <div class="stNavigationHeaderNextLink">
+            <a href="d0e5166.xhtml" title="d0e5166.xhtml#d0e5166" rel="next">Next</a>
+         </div>
+      </div>
+      <div class="stMain">
+         <div class="stRegion stSection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h1 class="stSectionTitle">
+                  <a id="d0e4998"
+                     href="#d0e4998"
+                     title="Section 5.114: simplified-ui-catalog">5.114. simplified-ui-catalog</a>
+               </h1>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1: Issues"
+                     id="d0e5000"
+                     href="#d0e5000">5.114.1. Issues</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1.1: Fragment Backstack Used For Navigation History"
+                     id="id_81bc1fc9-0f39-41af-89a7-cd2216f7584e"
+                     href="#id_81bc1fc9-0f39-41af-89a7-cd2216f7584e">5.114.1.1. Fragment Backstack Used For Navigation History</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5004"
+                  href="#d0e5004"
+                  title="Paragraph 5.114.1.1.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The current UI uses Android Fragments to construct the catalog interface. The previous version of the UI
+            used Android Activities. In order to have the fewest surprises in terms of implementation, the old
+            Activity-based UI was more or less translated directly to Fragment form. That is, each loaded feed is an
+            instance of a Fragment, and the Android Fragment backstack is used to store the history of feeds through
+            which the user has navigated. Unfortunately, the Android Fragment backstack is fraught with issues and
+            cannot be adequately controlled to give a pleasant user experience.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5006"
+                  href="#d0e5006"
+                  title="Paragraph 5.114.1.1.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Additionally, our Fragment instances are stateful, and this state can be invalidated. For example, if the
+            user navigates to a feed in account <span class="stTerm constant">A</span>, and then navigates to a feed in account <span class="stTerm constant">
+            B</span>, this will result in a fragment
+            <span class="stTerm constant">F</span>
+            being placed on the backstack that has a reference to information in account <span class="stTerm constant">A</span>.
+            If the user then navigates to the settings screen and deletes account <span class="stTerm constant">A</span>, the
+            Fragment <span class="stTerm constant">F</span> now contains references to the deleted account
+            <span class="stTerm constant">A</span>. Any attempt to move <span class="stTerm constant">F</span> back to the foreground
+            and interact with it in any meaningful way will almost certainly crash the application. The current
+            unpleasant workaround we apply is to simply clear the entire backstack whenever an account is deleted. This
+            is why the user is unceremoniously thrown back to the catalog screen whenever they delete an account.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5034"
+                  href="#d0e5034"
+                  title="Paragraph 5.114.1.1.3">3</a>
+            </div>
+            <div class="stRegionContent">
+            The proper way to implement this would be to store the navigation history as a navigable data structure in a
+            ViewModel, and use one stateless Fragment instance instead of multiple instances.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5036"
+                  href="#d0e5036"
+                  title="Paragraph 5.114.1.1.4">4</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Critical.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1.2: Navigation Feeds Unsupported"
+                     id="id_33879809-ea1a-4872-a196-5d58c183f8c6"
+                     href="#id_33879809-ea1a-4872-a196-5d58c183f8c6">5.114.1.2. Navigation Feeds Unsupported</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5045"
+                  href="#d0e5045"
+                  title="Paragraph 5.114.1.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The catalog UI does not currently support navigation feeds. This simply makes some OPDS feeds outside of the
+            Library Registry unusable in the application.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5047"
+                  href="#d0e5047"
+                  title="Paragraph 5.114.1.2.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Major.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1.3: Poor Scrolling Performance"
+                     id="id_fada61b8-1f8b-477f-80eb-6cef51b9e199"
+                     href="#id_fada61b8-1f8b-477f-80eb-6cef51b9e199">5.114.1.3. Poor Scrolling Performance</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5056"
+                  href="#d0e5056"
+                  title="Paragraph 5.114.1.3.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            Infinitely-scrolling feeds still do not have acceptable scrolling performance. The application will
+            typically stutter when scrolling the first 20-30 elements of feed, after which scrolling performance
+            improves.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5058"
+                  href="#d0e5058"
+                  title="Paragraph 5.114.1.3.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_f454641e-95b4-4513-b856-6dce9952c6ba"
+                  title="Subsection 2.3: Issue Class: BUG">BUG</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1.4: Infinite Feed Navigation Is Imprecise"
+                     id="id_721deff8-38b6-4355-9c0a-428c9e3149f8"
+                     href="#id_721deff8-38b6-4355-9c0a-428c9e3149f8">5.114.1.4. Infinite Feed Navigation Is Imprecise</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5067"
+                  href="#d0e5067"
+                  title="Paragraph 5.114.1.4.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The model used to store both the in-memory representation of infinitely scrolling feeds, and the user's
+            navigation history in the application is inadequate. This means that it is essentially impossible to
+            navigate back to a specific point in an infinitely scrolling feed after having switched to a different feed.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5069"
+                  href="#d0e5069"
+                  title="Paragraph 5.114.1.4.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1.5: Age Gate Should Not Be A Dialog"
+                     id="id_a9c157db-40f1-4435-86f7-d318f7cfa1e4"
+                     href="#id_a9c157db-40f1-4435-86f7-d318f7cfa1e4">5.114.1.5. Age Gate Should Not Be A Dialog</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5078"
+                  href="#d0e5078"
+                  title="Paragraph 5.114.1.5.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            Because of a miscommunication between various parties, a new COPPA age gate was added to comply with
+            Google's Play Store requirements. The new age gate was added as a dialog, when what should have happened was
+            that the existing full-screen age gate should simply have been updated with new text and controls.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5080"
+                  href="#d0e5080"
+                  title="Paragraph 5.114.1.5.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1.6: No Acquisition Controls"
+                     id="id_210b2bdf-39f7-4f68-b5cb-1ec19ec34ae3"
+                     href="#id_210b2bdf-39f7-4f68-b5cb-1ec19ec34ae3">5.114.1.6. No Acquisition Controls</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5090"
+                  href="#d0e5090"
+                  title="Paragraph 5.114.1.6.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The application does not allow users to pick specific acquisitions when borrowing or downloading books. A
+            <a class="stLinkExternal"
+                  href="https://github.com/io7m/opds-acquisition-spec"
+                  title="https://github.com/io7m/opds-acquisition-spec">written specification</a>
+            exists that describes the selection process, but it is unclear if all of the Library Simplified applications
+            follow it.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5096"
+                  href="#d0e5096"
+                  title="Paragraph 5.114.1.6.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1.7: Book Problem Reports Unimplemented"
+                     id="id_d97cec5e-03b2-4970-8670-52a89382db4f"
+                     href="#id_d97cec5e-03b2-4970-8670-52a89382db4f">5.114.1.7. Book Problem Reports Unimplemented</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5105"
+                  href="#d0e5105"
+                  title="Paragraph 5.114.1.7.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The application used to contain a way for users to report specific problems with books. Unfortunately, the
+            code for this was broken and the UI was eventually removed. To the present day, it has not been
+            reimplemented.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5107"
+                  href="#d0e5107"
+                  title="Paragraph 5.114.1.7.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1.8: Search Is Insufficient"
+                     id="id_4670d6b7-9919-4715-aeb3-3653bdd75f5f"
+                     href="#id_4670d6b7-9919-4715-aeb3-3653bdd75f5f">5.114.1.8. Search Is Insufficient</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5116"
+                  href="#d0e5116"
+                  title="Paragraph 5.114.1.8.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The catalog search dialog is slightly clumsy and each search query results in a new feed page being loaded
+            each time. For reasons of aesthetics, this could/should be replaced with something that loads search results
+            in-place.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5118"
+                  href="#d0e5118"
+                  title="Paragraph 5.114.1.8.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1.9: Feeds Requiring Authentication Are Obtrusive"
+                     id="id_c7bb5781-a180-4204-8f65-8dc1d3156d7d"
+                     href="#id_c7bb5781-a180-4204-8f65-8dc1d3156d7d">5.114.1.9. Feeds Requiring Authentication Are Obtrusive</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5127"
+                  href="#d0e5127"
+                  title="Paragraph 5.114.1.9.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            A somewhat ugly loop exists in the user interface. If the user navigates to a feed that requires
+            authentication in order to view it, the user is forcefully redirected to a login screen. If they try to
+            navigate back without logging in, they are forced back to the login screen. This can make it next to
+            impossible to switch accounts.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5129"
+                  href="#d0e5129"
+                  title="Paragraph 5.114.1.9.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Major.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.1.10: Books View Hides Books From Other Accounts"
+                     id="id_b6d211e3-5aa9-4e4c-bc9b-bca1b2a66a18"
+                     href="#id_b6d211e3-5aa9-4e4c-bc9b-bca1b2a66a18">5.114.1.10. Books View Hides Books From Other Accounts</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5138"
+                  href="#d0e5138"
+                  title="Paragraph 5.114.1.10.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The "Books" tab (the tab showing books that the user currently has loaned or downloaded) only shows books
+            from the most recent account. The historical reason for this is that support for multiple accounts was added
+            in very early versions of the application in a very haphazard way. In early versions of the application, the
+            application was almost entirely restarted to point at a new account each time the user switched accounts,
+            and there was no way to access data from accounts other than the current account. The application was
+            rewritten to properly support multiple accounts many years ago, but the "Books" tab still only has a user
+            interface that displays books from one account rather than from all accounts. This has, effectively, turned
+            what was a serious implementation bug into a conscious UI design decision.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5140"
+                  href="#d0e5140"
+                  title="Paragraph 5.114.1.10.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e79.xhtml#id_061f1764-bbdf-4e79-9eaa-eb28f22fe0ea"
+                  title="Subsection 2.6: Issue Class: DESIGN">DESIGN</a>. Severity: Major.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.2: Caches"
+                     id="d0e5148"
+                     href="#d0e5148">5.114.2. Caches</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.2.1: Fragment Instances"
+                     id="id_0ca59f36-ca0c-4699-8ad4-8221ccfb5273"
+                     href="#id_0ca59f36-ca0c-4699-8ad4-8221ccfb5273">5.114.2.1. Fragment Instances</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5152"
+                  href="#d0e5152"
+                  title="Paragraph 5.114.2.1.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            Fragments store downloaded feeds in a ViewModel. The ViewModel does not survive the fragment being removed
+            from the fragment backstack, and is not strictly a cache in the traditional sense.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.114.3: Module Link"
+                     id="d0e5156"
+                     href="#d0e5156">5.114.3. Module Link</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5158"
+                  href="#d0e5158"
+                  title="Paragraph 5.114.3.1">1</a>
+            </div>
+            <div class="stRegionContent">
+          The module can be found
+          at <a class="stLinkExternal"
+                  href="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-ui-catalog"
+                  title="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-ui-catalog">
+          simplified-ui-catalog</a>.
+        </div>
+         </div>
+      </div>
+      <div class="stNavigationFooter">
+         <div class="stNavigationFooterPrevTitle">5.113. simplified-ui-branding</div>
+         <div class="stNavigationFooterPrevLink">
+            <a href="d0e4980.xhtml" title="d0e4980.xhtml#d0e4980" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationFooterUpTitle">5. Modules</div>
+         <div class="stNavigationFooterUpLink">
+            <a href="d0e2081.xhtml"
+               title="d0e2081.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationFooterNextTitle">5.115. simplified-ui-errorpage</div>
+         <div class="stNavigationFooterNextLink">
+            <a href="d0e5166.xhtml" title="d0e5166.xhtml#d0e5166" rel="next">Next</a>
+         </div>
+      </div>
+      <!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+   </body>
+</html>
