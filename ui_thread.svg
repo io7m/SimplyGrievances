@@ -31,16 +31,16 @@
      width="640px"
      borderlayer="true"
      inkscape:showpageshadow="false"
-     inkscape:zoom="1"
-     inkscape:cx="403.5"
-     inkscape:cy="319"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="523.61257"
+     inkscape:cy="310.41988"
      inkscape:window-width="1912"
      inkscape:window-height="1028"
      inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
-     inkscape:snap-global="true">
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid858"
@@ -90,8 +90,7 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     sodipodi:insensitive="true">
+     id="layer1">
     <rect
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect125681"
@@ -100,7 +99,8 @@
        x="-4.2333331"
        y="-4.2333331"
        rx="0.26458332"
-       ry="0.26458332" />
+       ry="0.26458332"
+       sodipodi:insensitive="true" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 16.933333,8.4666666 V 148.16667"
@@ -205,29 +205,44 @@
     <text
        xml:space="preserve"
        style="font-size:3.52777px;line-height:1.25;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       x="63.944054"
-       y="31.454481"
+       x="62.112125"
+       y="31.083271"
        id="text43894"><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="63.944054"
-         y="31.454481"
+         x="62.112125"
+         y="31.083271"
          id="tspan85225">Event occurs. Obtains reference to UI element.</tspan><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="63.944054"
-         y="35.864193"
-         id="tspan95792"></tspan><tspan
+         x="62.112125"
+         y="35.492985"
+         id="tspan95792" /><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="63.944054"
-         y="40.273907"
-         id="tspan95998"></tspan><tspan
+         x="62.112125"
+         y="39.902695"
+         id="tspan95998" /><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
-         x="63.944054"
-         y="44.68362"
-         id="tspan97840">Schedules code to run on UI thread using UI element.</tspan></text>
+         x="62.112125"
+         y="44.312408"
+         id="tspan97840">Schedules code to run on UI thread using UI element.</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="62.112125"
+         y="48.722122"
+         id="tspan1817"></tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="62.112125"
+         y="53.131832"
+         id="tspan4087">The code is scheduled to run, but has not yet started</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="62.112125"
+         y="57.541546"
+         id="tspan1819">running.</tspan></text>
     <rect
        style="fill:#ffaaaa;stroke:#000000;stroke-width:0.352777;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect45010"
@@ -546,5 +561,61 @@
        inkscape:randomized="0"
        d="m 512,432 -29.49343,22.55033 36.86759,4.37726 -35.87801,9.54714 32.3861,18.15269 -36.80049,-4.90952 22.97413,29.16452 L 469.93546,492.26368 480,528 l -22.55033,-29.49343 -4.37726,36.86759 -9.54714,-35.87801 -18.15269,32.3861 4.90952,-36.80049 -29.16452,22.97413 18.61874,-32.12043 L 384,496 l 29.49343,-22.55033 -36.86759,-4.37726 35.87801,-9.54714 -32.3861,-18.15269 36.80049,4.90952 -22.97413,-29.16452 32.12043,18.61874 L 416,400 l 22.55033,29.49343 4.37726,-36.86759 9.54714,35.87801 18.15269,-32.3861 -4.90952,36.80049 29.16452,-22.97413 -18.61874,32.12043 z"
        transform="matrix(0.08678713,0,0,0.08678713,136.70784,78.722127)" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Normal';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="190.5"
+       y="42.333332"
+       id="text10140"><tspan
+         sodipodi:role="line"
+         id="tspan10138"
+         style="stroke-width:0.264583"
+         x="190.5"
+         y="42.333332" /></text>
+    <g
+       id="g14244"
+       transform="translate(-6.499824,19.467921)">
+      <circle
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round"
+         id="path13895"
+         cx="192.85318"
+         cy="35.573402"
+         r="2.5542326" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 192.89797,33.577739 v 2.138264 l 1.80758,0.840865"
+         id="path14160" />
+    </g>
+    <g
+       id="g14568"
+       transform="translate(-6.499824,49.192347)">
+      <circle
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round"
+         id="circle14564"
+         cx="192.85318"
+         cy="35.573402"
+         r="2.5542326" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 192.89797,33.577739 v 2.138264 l 1.80758,0.840865"
+         id="path14566" />
+    </g>
+    <g
+       id="g14858"
+       transform="translate(-7.3416223,3.2392665)">
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round"
+         id="rect14592"
+         width="5.0772467"
+         height="5.0772467"
+         x="191.07579"
+         y="95.746254"
+         rx="0.26458332"
+         ry="0.26458332" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 192.99004,97.17897 v 2.175343 l 1.18518,-1.18518 z"
+         id="path14774" />
+    </g>
   </g>
 </svg>

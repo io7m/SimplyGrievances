@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -ex
 
 rm -rf out
 mkdir -p out
@@ -11,9 +11,18 @@ cp ui_thread.png out/
 cp document.css out/
 cp document-epub.css out/
 
+saxon-xslt -s:main.xml -xsl:issues.xslt > issues.xml
+saxon-xslt -s:main.xml -xsl:caches.xslt > caches.xml
+
 java -jar com.io7m.xstructural.cmdline-1.3.0-SNAPSHOT-main.jar \
 xhtml \
 --outputDirectory out \
+--sourceFile main.xml
+
+java -jar com.io7m.xstructural.cmdline-1.3.0-SNAPSHOT-main.jar \
+xhtml \
+--outputDirectory out \
+--stylesheet MULTIPLE_FILE \
 --sourceFile main.xml
 
 java -jar com.io7m.xstructural.cmdline-1.3.0-SNAPSHOT-main.jar \

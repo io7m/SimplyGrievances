@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:ListUnordered xmlns:s="urn:com.io7m.structural:8:0">
+   <s:Item>
+      <s:Link target="dec10980-6fb6-4fa6-ab4a-625cb040662e">AccountProviderSourceNYPLRegistry</s:Link>
+   </s:Item>
+   <s:Item>
+      <s:Link target="5583dd46-a4dc-43c9-b93d-7c1d7f0caead">Cached Documents</s:Link>
+   </s:Item>
+   <s:Item>
+      <s:Link target="0ca59f36-ca0c-4699-8ad4-8221ccfb5273">Fragment Instances</s:Link>
+   </s:Item>
+</s:ListUnordered>

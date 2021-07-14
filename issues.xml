@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Table xmlns:s="urn:com.io7m.structural:8:0" type="genericTable">
+   <s:Columns>
+      <s:Column>Issue</s:Column>
+      <s:Column>Class</s:Column>
+      <s:Column>Severity</s:Column>
+   </s:Columns>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="33b42c1a-ad72-44df-814a-fac3d394b269">Book IDs Are Not Unique Enough</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Critical</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="7e236a16-1377-4ad3-b279-6e0fee906fc7">UI Thread Service Fundamentally Flawed</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="5955c72f-6d78-40d2-89b0-57649ca0aff8">UITHREAD</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Critical</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="81bc1fc9-0f39-41af-89a7-cd2216f7584e">Fragment Backstack Used For Navigation History</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Critical</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="697fc292-4cae-4c1b-a5f0-8c2e8f9f1aff">Fundamentally Broken</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="5955c72f-6d78-40d2-89b0-57649ca0aff8">UITHREAD</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Critical</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="dd6878df-4fff-4625-ae40-51208c98c513">Uses UIThread API</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="5955c72f-6d78-40d2-89b0-57649ca0aff8">UITHREAD</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Critical</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="8385c98e-4dfa-4619-a61a-d7c9a7e440d6">Uses UIThread API</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="5955c72f-6d78-40d2-89b0-57649ca0aff8">UITHREAD</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Critical</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="15c01b35-088a-45cb-a57a-035b531424ed">At-Least-One Account Limit</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="32645ae4-e6be-44bb-aa2c-f98bdc2509a4">Obsolescence</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="33d4dc0c-45f1-4b3b-bad8-019fbcbcca78">COMPLEX</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="13cf8efc-1a6b-46f6-af46-e1cd2dc7fa2b">Excessively Single-Threaded Operation</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="521a7037-1fc3-411e-b02a-0a4fe8ef3a75">Cannot Return Unfulfilled Adobe Loans</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="4970b649-f6f1-4082-bd56-141b9cf960f2">Cannot Return Deleted Books</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="8f088d27-a113-4b4a-a024-fbe08b95bf86">Adobe Code Can Prevent Logging Out</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="d61d8434-7a3b-4309-b38b-e6ee95c4f834">Leaky Abstraction</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="0a1271fb-f9fb-4180-b12e-f7174ae6571f">Feed Groups Lose Ordering</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="c4cb6df6-e285-4a8d-85b4-8ccc2974f7e8">Lost Lexical Information</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="8630e0b7-15d4-495b-8d99-50edfabd877a">Complicated Parser Code</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="33d4dc0c-45f1-4b3b-bad8-019fbcbcca78">COMPLEX</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="12b0d81f-4aac-4938-baf3-22334541a20d">Availability Inference May Be Incorrect</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="33d4dc0c-45f1-4b3b-bad8-019fbcbcca78">COMPLEX</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="cd3c2b47-7363-4956-94f1-c2728bf90272">Grossly Overengineered Bookmark Policy</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="33d4dc0c-45f1-4b3b-bad8-019fbcbcca78">COMPLEX</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="138ca60c-c6e1-426a-9ac0-993e7395bd75">Email As Transport Method</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="b958254b-d445-4c77-8c10-fd096397daa1">Mockito Maintenance Burden</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="33d4dc0c-45f1-4b3b-bad8-019fbcbcca78">COMPLEX</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="33879809-ea1a-4872-a196-5d58c183f8c6">Navigation Feeds Unsupported</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="c7bb5781-a180-4204-8f65-8dc1d3156d7d">Feeds Requiring Authentication Are Obtrusive</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="b6d211e3-5aa9-4e4c-bc9b-bca1b2a66a18">Books View Hides Books From Other Accounts</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="9e943b9b-7ac6-49b9-8306-dd4a6b044c77">Player Is Activity-Scoped</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="c5636f09-f0af-46ca-8993-0c694f2e76d4">LIFECYCLE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="5bd904a9-37f9-4233-b180-c615fd4b1e9e">Problematic Bookmark Storage</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="dad5653b-f7da-49b1-8655-5b201101cc5f">Incorrect Use Of Fragment Factories</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="0715c1d4-e0b7-453a-973a-f1f4d6c372cc">AutoValue AccountDescription</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="49489ee8-17ee-49c1-98b2-ce387af0cf24">AUTOVALUE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="eb1a3db3-729b-4fa5-8a78-13eba6996ac5">AccountAuthenticationAdobeActivation Is Dead Code</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="c677d10e-2085-4bbf-9385-14f9287ef0e7">Unused AccountProvider idNumeric Field</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="b68437a4-97b2-401c-8a23-3fdda3e9f277">AccountProviderAuthenticationDescription COPPA Check</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="b10e8b2c-b080-4042-b878-d92dc02db48f">Unused annotationsURI Field</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="7ce15505-fe1b-4787-8a89-cd9d9aedcc30">Global Toolbar Use</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="df13d585-7f69-445f-a74a-9348541a6bdf">Outdated Manifest</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="4e99d7b9-f00f-452c-aeee-c70e383df103">Outdated Manifest</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="9fb47a4f-e947-4aeb-90cf-9186f9f88f39">Outdated Manifest</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="cfd401ac-dba8-485a-8fcc-b678219fced6">Code Belongs Elsewhere</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="28e9fe65-f398-4ccc-9582-fed71a3dbc0a">Book Subtask Ordering</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="1636fac9-0dbe-47b0-b487-9e87b8e764e1">Module Is Obsolete</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="cf8e7b8f-ac2d-4299-813c-7c2a079a0f2a">BookUnexpectedTypeException Is Dead Code</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="26a3d5e6-bded-411a-aea9-d0365393032d">BookUnsupportedTypeException Is Dead Code</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="c3296b0c-be18-48ec-8867-eb1714c61e3b">Picasso Is Old</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="25ce6d92-edf2-404b-9d66-9aa7f5a7ff32">Complicated Code</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="495fb736-de8f-4de1-b9cc-01ffc194f3fd">Book Database Uses OPDS 1.2 JSON</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="ded274fa-37b5-4b5d-927c-37ed1c852013">Book Database Leaks Temporary Files</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="2db20da4-07d7-40f5-85c7-cc5b751cc11a">Poorly Defined API</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="e7ded385-8adf-4224-afbe-db21d950ea13">Poorly Defined API</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="1e366182-6afa-434d-b549-548696b7a7f1">Lacking General Service Registration</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="6dc8f169-d509-421f-8fde-5fbf60ee63d1">Utter Obsolescence</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="2caf3091-a7cd-4072-88f8-5c2f7c421379">Dead Code</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="39799e67-cb24-4c28-94e1-af13d9901c4a">Dead Workarounds</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="d40f3db8-3672-44b9-9bb8-bc4319334bc3">Fails On First Error</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="221abbfc-e0f0-4544-bc49-095972cc1c85">MainServices Class Is Too Large</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="33d4dc0c-45f1-4b3b-bad8-019fbcbcca78">COMPLEX</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="80d73952-b597-4f35-b16e-dc286efee2fa">MainBundledContentResolver</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="08ed448b-033d-4ba3-b8b1-5f866f9fa059">Global Toolbar Handling</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="7a69c7c1-4c68-4811-b8e8-3ab6c2287839">Migrations Are Obsolete</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="e3e16851-99ec-46d2-901d-8caa5416a543">Migrations Are Obsolete</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="3570734f-0a4c-46ac-affd-54f4366b7b78">Migrations Are Obsolete</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="d5dd0452-7aef-43c6-999f-32c5d6a8f176">Migrations Are Obsolete</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="76080b59-119d-4225-af2b-cf8385cf1eb9">Poorly Designed/Used API</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="25920b5e-a355-4cb6-afc7-2fd9abcccdbf">Needs Style Cleanups</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="ade6440a-e336-4ec5-9000-6a4c6fb64a4c">STYLE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="459b4350-14ea-4931-9d33-e52af1eaf541">Not Implemented</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="823bb39a-f9de-4bf6-b9c8-ebb5f98be522">DEADCODE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="8cac79ca-0804-4da5-a1f2-228e499bba0b">Hand-Written Data Classes</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="43bf1a57-6d4e-44af-9188-c197de00c087">Largely Obsolete</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="e090c8ac-fbb9-4746-8c8c-9c8357c60e8f">AutoValue ProfileIdleTimedOut</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="49489ee8-17ee-49c1-98b2-ce387af0cf24">AUTOVALUE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="9f6fe44f-ce54-4b4e-b2a0-5d55f2847fd1">AutoValue ProfileIdleTimeOutSoon</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="49489ee8-17ee-49c1-98b2-ce387af0cf24">AUTOVALUE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="20a00035-4c41-4895-a1ae-9738d764158e">Hand-Written Data Classes</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="61c28a71-a9dc-4e3c-9bd3-a25cdc37de52">Could Be Moved To External Project</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="33d4dc0c-45f1-4b3b-bad8-019fbcbcca78">COMPLEX</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="ce480f6f-fe93-40af-886a-f019938dc70e">UI Needs Redesign</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="54c26b77-d1d3-498a-bfe2-b665a900210c">UI Underspecified</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="fada61b8-1f8b-477f-80eb-6cef51b9e199">Poor Scrolling Performance</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="721deff8-38b6-4355-9c0a-428c9e3149f8">Infinite Feed Navigation Is Imprecise</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="a9c157db-40f1-4435-86f7-d318f7cfa1e4">Age Gate Should Not Be A Dialog</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="210b2bdf-39f7-4f68-b5cb-1ec19ec34ae3">No Acquisition Controls</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="d97cec5e-03b2-4970-8670-52a89382db4f">Book Problem Reports Unimplemented</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="4670d6b7-9919-4715-aeb3-3653bdd75f5f">Search Is Insufficient</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="66c03063-1670-41ff-ae41-75543bfa590c">Picasso Is Old</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="988fb304-3ec5-4c97-8b3f-a7663e7d2fb8">Pandora BottomNavigator Is Buggy</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="c6c8b186-3559-47df-b695-52afeea55206">Uses Fragment Backstack</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="87703707-0539-414c-afd1-b31418a35f95">Profile Screen Aesthetics</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="96707ae5-f87b-49e3-8b25-5269fc852c67">Missing Legal Documents</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="0c65c5d2-fc02-47d6-9adb-451e07fd2a44">Obsolete Migration Screen</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="a10becde-d122-4797-84ad-546ae273438b">Failure Mode Is Poor</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="af7b21c0-f211-43f5-bbe4-fe6eca9a28fd">Action Bars Are Obsolete</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="83ae177b-a9a8-49d2-9048-6e53ed2bb79f">Activity Listeners</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="ade6440a-e336-4ec5-9000-6a4c6fb64a4c">STYLE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="1884f133-2de6-4795-bd62-6969b9c973c0">Page Turn Events</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">COMPLEX</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="bfcbe0a4-ab39-46be-99cc-4a9bd3a47bab">Locked To Portrait Mode</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="c5636f09-f0af-46ca-8993-0c694f2e76d4">LIFECYCLE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="191f0594-266f-483b-bd7b-5acf4c73b44b">Activity Listeners</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="ade6440a-e336-4ec5-9000-6a4c6fb64a4c">STYLE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="7cd4d17c-dcef-470d-b28b-3ba1bc75293b">Library Needs Update</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="037b06ca-ba23-4f00-91aa-af322599b4a5">Version-Specific Maintenance Burden</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="33d4dc0c-45f1-4b3b-bad8-019fbcbcca78">COMPLEX</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+</s:Table>
