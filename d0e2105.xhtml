@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <meta http-equiv="content-type"
+            content="application/xhtml+xml; charset=utf-8"/>
+      <meta name="generator" content="com.io7m.xstructural/1.3.0-SNAPSHOT"/>
+      <link rel="stylesheet" type="text/css" href="reset.css"/>
+      <link rel="stylesheet" type="text/css" href="structural.css"/>
+      <link rel="stylesheet" type="text/css" href="document.css"/>
+      <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+      <meta name="DC.Creator" content="Mark Raynsford"/>
+      <meta name="DC.Date" content="2021-07-08T19:42:35Z"/>
+      <meta name="DC.Identifier" content="af39eadf-9d6a-42bf-91e2-a864b5dcf6b7"/>
+      <meta name="DC.Language" content="en"/>
+      <meta name="DC.Rights" content="Public Domain"/>
+      <meta name="DC.Title"
+            content="Simply Grievances: Problems With The Library Simplified Android Codebase"/>
+      <title>Simply Grievances: Problems With The Library Simplified Android Codebase: 5. Modules</title>
+   </head>
+   <body><!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+      <div class="stNavigationHeader">
+         <div class="stNavigationHeaderPrevTitle">4. Caches</div>
+         <div class="stNavigationHeaderPrevLink">
+            <a href="d0e2062.xhtml"
+               title="d0e2062.xhtml#id_9a930a36-6527-4c93-8e96-c27eecdee7d5"
+               rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationHeaderUpTitle">Front Matter</div>
+         <div class="stNavigationHeaderUpLink">
+            <a href="index-m.xhtml" title="index-m.xhtml#d0e1" rel="up">Up</a>
+         </div>
+         <div class="stNavigationHeaderNextTitle">5.1. org.librarysimplified.audiobook.api</div>
+         <div class="stNavigationHeaderNextLink">
+            <a href="d0e2107.xhtml" title="d0e2107.xhtml#d0e2107" rel="next">Next</a>
+         </div>
+      </div>
+      <div class="stMain">
+         <div class="stRegion stSection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h1 class="stSectionTitle">
+                  <a id="id_104c09e6-6870-4981-b151-438d74b891ac"
+                     href="#id_104c09e6-6870-4981-b151-438d74b891ac"
+                     title="Section 5: Modules">5. Modules</a>
+               </h1>
+            </div>
+         </div>
+         <div class="stRegion stTableOfContents">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <div class="stTableOfContents">
+                  <ul>
+                     <li>
+                        <a href="d0e2107.xhtml#d0e2107"
+                           title="Section 5.1: org.librarysimplified.audiobook.api">5.1. org.librarysimplified.audiobook.api</a>
+                     </li>
+                     <li>
+                        <a href="d0e2124.xhtml#d0e2124"
+                           title="Section 5.2: org.librarysimplified.audiobook.demo">5.2. org.librarysimplified.audiobook.demo</a>
+                     </li>
+                     <li>
+                        <a href="d0e2141.xhtml#d0e2141"
+                           title="Section 5.3: org.librarysimplified.audiobook.downloads">5.3. org.librarysimplified.audiobook.downloads</a>
+                     </li>
+                     <li>
+                        <a href="d0e2171.xhtml#d0e2171"
+                           title="Section 5.4: org.librarysimplified.audiobook.feedbooks">5.4. org.librarysimplified.audiobook.feedbooks</a>
+                     </li>
+                     <li>
+                        <a href="d0e2188.xhtml#d0e2188"
+                           title="Section 5.5: org.librarysimplified.audiobook.json_canon">5.5. org.librarysimplified.audiobook.json_canon</a>
+                     </li>
+                     <li>
+                        <a href="d0e2206.xhtml#d0e2206"
+                           title="Section 5.6: org.librarysimplified.audiobook.http">5.6. org.librarysimplified.audiobook.http</a>
+                     </li>
+                     <li>
+                        <a href="d0e2236.xhtml#d0e2236"
+                           title="Section 5.7: org.librarysimplified.audiobook.json_web_token">5.7. org.librarysimplified.audiobook.json_web_token</a>
+                     </li>
+                     <li>
+                        <a href="d0e2262.xhtml#d0e2262"
+                           title="Section 5.8: org.librarysimplified.audiobook.lcp.license_status">5.8. org.librarysimplified.audiobook.lcp.license_status</a>
+                     </li>
+                     <li>
+                        <a href="d0e2279.xhtml#d0e2279"
+                           title="Section 5.9: org.librarysimplified.audiobook.license_check.api">5.9. org.librarysimplified.audiobook.license_check.api</a>
+                     </li>
+                     <li>
+                        <a href="d0e2296.xhtml#d0e2296"
+                           title="Section 5.10: org.librarysimplified.audiobook.license_check.spi">5.10. org.librarysimplified.audiobook.license_check.spi</a>
+                     </li>
+                     <li>
+                        <a href="d0e2313.xhtml#d0e2313"
+                           title="Section 5.11: org.librarysimplified.audiobook.manifest.api">5.11. org.librarysimplified.audiobook.manifest.api</a>
+                     </li>
+                     <li>
+                        <a href="d0e2331.xhtml#d0e2331"
+                           title="Section 5.12: org.librarysimplified.audiobook.manifest_fulfill.api">5.12. org.librarysimplified.audiobook.manifest_fulfill.api</a>
+                     </li>
+                     <li>
+                        <a href="d0e2348.xhtml#d0e2348"
+                           title="Section 5.13: org.librarysimplified.audiobook.manifest_fulfill.basic">5.13. org.librarysimplified.audiobook.manifest_fulfill.basic</a>
+                     </li>
+                     <li>
+                        <a href="d0e2365.xhtml#d0e2365"
+                           title="Section 5.14: org.librarysimplified.audiobook.manifest_fulfill.opa">5.14. org.librarysimplified.audiobook.manifest_fulfill.opa</a>
+                     </li>
+                     <li>
+                        <a href="d0e2382.xhtml#d0e2382"
+                           title="Section 5.15: org.librarysimplified.audiobook.manifest_fulfill.spi">5.15. org.librarysimplified.audiobook.manifest_fulfill.spi</a>
+                     </li>
+                     <li>
+                        <a href="d0e2399.xhtml#d0e2399"
+                           title="Section 5.16: org.librarysimplified.audiobook.manifest_parser.api">5.16. org.librarysimplified.audiobook.manifest_parser.api</a>
+                     </li>
+                     <li>
+                        <a href="d0e2416.xhtml#d0e2416"
+                           title="Section 5.17: org.librarysimplified.audiobook.manifest_parser.extension_spi">5.17. org.librarysimplified.audiobook.manifest_parser.extension_spi</a>
+                     </li>
+                     <li>
+                        <a href="d0e2434.xhtml#d0e2434"
+                           title="Section 5.18: org.librarysimplified.audiobook.manifest_parser.webpub">5.18. org.librarysimplified.audiobook.manifest_parser.webpub</a>
+                     </li>
+                     <li>
+                        <a href="d0e2470.xhtml#d0e2470"
+                           title="Section 5.19: org.librarysimplified.audiobook.mocking">5.19. org.librarysimplified.audiobook.mocking</a>
+                     </li>
+                     <li>
+                        <a href="d0e2487.xhtml#d0e2487"
+                           title="Section 5.20: org.librarysimplified.audiobook.open_access">5.20. org.librarysimplified.audiobook.open_access</a>
+                     </li>
+                     <li>
+                        <a href="d0e2520.xhtml#d0e2520"
+                           title="Section 5.21: org.librarysimplified.audiobook.parser.api">5.21. org.librarysimplified.audiobook.parser.api</a>
+                     </li>
+                     <li>
+                        <a href="d0e2537.xhtml#d0e2537"
+                           title="Section 5.22: org.librarysimplified.audiobook.rbdigital">5.22. org.librarysimplified.audiobook.rbdigital</a>
+                     </li>
+                     <li>
+                        <a href="d0e2554.xhtml#d0e2554"
+                           title="Section 5.23: org.librarysimplified.audiobook.tests">5.23. org.librarysimplified.audiobook.tests</a>
+                     </li>
+                     <li>
+                        <a href="d0e2572.xhtml#d0e2572"
+                           title="Section 5.24: org.librarysimplified.audiobook.tests.device">5.24. org.librarysimplified.audiobook.tests.device</a>
+                     </li>
+                     <li>
+                        <a href="d0e2589.xhtml#d0e2589"
+                           title="Section 5.25: org.librarysimplified.audiobook.tests.sandbox">5.25. org.librarysimplified.audiobook.tests.sandbox</a>
+                     </li>
+                     <li>
+                        <a href="d0e2606.xhtml#d0e2606"
+                           title="Section 5.26: org.librarysimplified.audiobook.views">5.26. org.librarysimplified.audiobook.views</a>
+                     </li>
+                     <li>
+                        <a href="d0e2689.xhtml#d0e2689"
+                           title="Section 5.27: org.librarysimplified.r2.api">5.27. org.librarysimplified.r2.api</a>
+                     </li>
+                     <li>
+                        <a href="d0e2706.xhtml#d0e2706"
+                           title="Section 5.28: org.librarysimplified.r2.demo">5.28. org.librarysimplified.r2.demo</a>
+                     </li>
+                     <li>
+                        <a href="d0e2723.xhtml#d0e2723"
+                           title="Section 5.29: org.librarysimplified.r2.tests">5.29. org.librarysimplified.r2.tests</a>
+                     </li>
+                     <li>
+                        <a href="d0e2741.xhtml#d0e2741"
+                           title="Section 5.30: org.librarysimplified.r2.ui_thread">5.30. org.librarysimplified.r2.ui_thread</a>
+                     </li>
+                     <li>
+                        <a href="d0e2758.xhtml#d0e2758"
+                           title="Section 5.31: org.librarysimplified.r2.vanilla">5.31. org.librarysimplified.r2.vanilla</a>
+                     </li>
+                     <li>
+                        <a href="d0e2775.xhtml#d0e2775"
+                           title="Section 5.32: org.librarysimplified.r2.views">5.32. org.librarysimplified.r2.views</a>
+                     </li>
+                     <li>
+                        <a href="d0e2792.xhtml#d0e2792"
+                           title="Section 5.33: simplified-accessibility">5.33. simplified-accessibility</a>
+                     </li>
+                     <li>
+                        <a href="d0e2809.xhtml#d0e2809"
+                           title="Section 5.34: simplified-accounts-api">5.34. simplified-accounts-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e2890.xhtml#id_19cdf946-6f34-4d7a-aa0b-bbcd8f9e18d7"
+                           title="Section 5.35: simplified-accounts-database">5.35. simplified-accounts-database</a>
+                     </li>
+                     <li>
+                        <a href="d0e2930.xhtml#d0e2930"
+                           title="Section 5.36: simplified-accounts-database-api">5.36. simplified-accounts-database-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e2947.xhtml#d0e2947"
+                           title="Section 5.37: simplified-accounts-json">5.37. simplified-accounts-json</a>
+                     </li>
+                     <li>
+                        <a href="d0e2980.xhtml#d0e2980"
+                           title="Section 5.38: simplified-accounts-registry">5.38. simplified-accounts-registry</a>
+                     </li>
+                     <li>
+                        <a href="d0e2997.xhtml#d0e2997"
+                           title="Section 5.39: simplified-accounts-registry-api">5.39. simplified-accounts-registry-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3014.xhtml#d0e3014"
+                           title="Section 5.40: simplified-accounts-source-filebased">5.40. simplified-accounts-source-filebased</a>
+                     </li>
+                     <li>
+                        <a href="d0e3031.xhtml#d0e3031"
+                           title="Section 5.41: simplified-accounts-source-nyplregistry">5.41. simplified-accounts-source-nyplregistry</a>
+                     </li>
+                     <li>
+                        <a href="d0e3061.xhtml#d0e3061"
+                           title="Section 5.42: simplified-accounts-source-spi">5.42. simplified-accounts-source-spi</a>
+                     </li>
+                     <li>
+                        <a href="d0e3078.xhtml#d0e3078"
+                           title="Section 5.43: simplified-adobe-extensions">5.43. simplified-adobe-extensions</a>
+                     </li>
+                     <li>
+                        <a href="d0e3104.xhtml#id_497abe8b-113b-4bbb-8aaf-5f9da08ce484"
+                           title="Section 5.44: simplified-analytics-api">5.44. simplified-analytics-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3121.xhtml#d0e3121"
+                           title="Section 5.45: simplified-analytics-circulation">5.45. simplified-analytics-circulation</a>
+                     </li>
+                     <li>
+                        <a href="d0e3138.xhtml#d0e3138"
+                           title="Section 5.46: simplified-android-ktx">5.46. simplified-android-ktx</a>
+                     </li>
+                     <li>
+                        <a href="d0e3171.xhtml#d0e3171"
+                           title="Section 5.47: simplified-announcements">5.47. simplified-announcements</a>
+                     </li>
+                     <li>
+                        <a href="d0e3189.xhtml#d0e3189"
+                           title="Section 5.48: simplified-app-openebooks">5.48. simplified-app-openebooks</a>
+                     </li>
+                     <li>
+                        <a href="d0e3215.xhtml#d0e3215"
+                           title="Section 5.49: simplified-app-simplye">5.49. simplified-app-simplye</a>
+                     </li>
+                     <li>
+                        <a href="d0e3241.xhtml#d0e3241"
+                           title="Section 5.50: simplified-app-vanilla">5.50. simplified-app-vanilla</a>
+                     </li>
+                     <li>
+                        <a href="d0e3267.xhtml#d0e3267" title="Section 5.51: simplified-books-api">5.51. simplified-books-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3303.xhtml#d0e3303"
+                           title="Section 5.52: simplified-books-audio">5.52. simplified-books-audio</a>
+                     </li>
+                     <li>
+                        <a href="d0e3329.xhtml#d0e3329"
+                           title="Section 5.53: simplified-books-borrowing">5.53. simplified-books-borrowing</a>
+                     </li>
+                     <li>
+                        <a href="d0e3366.xhtml#d0e3366"
+                           title="Section 5.54: simplified-books-bundled-api">5.54. simplified-books-bundled-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3396.xhtml#d0e3396"
+                           title="Section 5.55: simplified-books-controller">5.55. simplified-books-controller</a>
+                     </li>
+                     <li>
+                        <a href="d0e3500.xhtml#d0e3500"
+                           title="Section 5.56: simplified-books-controller-api">5.56. simplified-books-controller-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3545.xhtml#d0e3545"
+                           title="Section 5.57: simplified-books-covers">5.57. simplified-books-covers</a>
+                     </li>
+                     <li>
+                        <a href="d0e3600.xhtml#d0e3600"
+                           title="Section 5.58: simplified-books-database">5.58. simplified-books-database</a>
+                     </li>
+                     <li>
+                        <a href="d0e3643.xhtml#d0e3643"
+                           title="Section 5.59: simplified-books-database-api">5.59. simplified-books-database-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3661.xhtml#d0e3661"
+                           title="Section 5.60: simplified-books-formats">5.60. simplified-books-formats</a>
+                     </li>
+                     <li>
+                        <a href="d0e3691.xhtml#id_31131af3-fe4f-4cae-80d5-85d8fc5e7fb2"
+                           title="Section 5.61: simplified-books-formats-api">5.61. simplified-books-formats-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3721.xhtml#d0e3721"
+                           title="Section 5.62: simplified-books-registry-api">5.62. simplified-books-registry-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3738.xhtml#d0e3738" title="Section 5.63: simplified-boot-api">5.63. simplified-boot-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3768.xhtml#d0e3768"
+                           title="Section 5.64: simplified-buildconfig-api">5.64. simplified-buildconfig-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3785.xhtml#d0e3785"
+                           title="Section 5.65: simplified-cardcreator">5.65. simplified-cardcreator</a>
+                     </li>
+                     <li>
+                        <a href="d0e3803.xhtml#d0e3803"
+                           title="Section 5.66: simplified-content-api">5.66. simplified-content-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3820.xhtml#d0e3820"
+                           title="Section 5.67: simplified-crashlytics">5.67. simplified-crashlytics</a>
+                     </li>
+                     <li>
+                        <a href="d0e3837.xhtml#d0e3837"
+                           title="Section 5.68: simplified-crashlytics-api">5.68. simplified-crashlytics-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3854.xhtml#d0e3854" title="Section 5.69: simplified-documents">5.69. simplified-documents</a>
+                     </li>
+                     <li>
+                        <a href="d0e3894.xhtml#d0e3894" title="Section 5.70: simplified-feeds-api">5.70. simplified-feeds-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e3937.xhtml#d0e3937" title="Section 5.71: simplified-files">5.71. simplified-files</a>
+                     </li>
+                     <li>
+                        <a href="d0e3975.xhtml#d0e3975" title="Section 5.72: simplified-futures">5.72. simplified-futures</a>
+                     </li>
+                     <li>
+                        <a href="d0e3992.xhtml#d0e3992" title="Section 5.73: simplified-json-core">5.73. simplified-json-core</a>
+                     </li>
+                     <li>
+                        <a href="d0e4029.xhtml#d0e4029" title="Section 5.74: simplified-links">5.74. simplified-links</a>
+                     </li>
+                     <li>
+                        <a href="d0e4046.xhtml#d0e4046"
+                           title="Section 5.75: simplified-links-json">5.75. simplified-links-json</a>
+                     </li>
+                     <li>
+                        <a href="d0e4063.xhtml#d0e4063" title="Section 5.76: simplified-main">5.76. simplified-main</a>
+                     </li>
+                     <li>
+                        <a href="d0e4171.xhtml#d0e4171" title="Section 5.77: simplified-metrics">5.77. simplified-metrics</a>
+                     </li>
+                     <li>
+                        <a href="d0e4189.xhtml#d0e4189"
+                           title="Section 5.78: simplified-metrics-api">5.78. simplified-metrics-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4206.xhtml#d0e4206"
+                           title="Section 5.79: simplified-migration-api">5.79. simplified-migration-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4232.xhtml#d0e4232"
+                           title="Section 5.80: simplified-migration-fake">5.80. simplified-migration-fake</a>
+                     </li>
+                     <li>
+                        <a href="d0e4258.xhtml#d0e4258"
+                           title="Section 5.81: simplified-migration-from3master">5.81. simplified-migration-from3master</a>
+                     </li>
+                     <li>
+                        <a href="d0e4284.xhtml#d0e4284"
+                           title="Section 5.82: simplified-migration-spi">5.82. simplified-migration-spi</a>
+                     </li>
+                     <li>
+                        <a href="d0e4310.xhtml#d0e4310"
+                           title="Section 5.83: simplified-networkconnectivity">5.83. simplified-networkconnectivity</a>
+                     </li>
+                     <li>
+                        <a href="d0e4337.xhtml#d0e4337"
+                           title="Section 5.84: simplified-networkconnectivity-api">5.84. simplified-networkconnectivity-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4363.xhtml#d0e4363"
+                           title="Section 5.85: simplified-notifications">5.85. simplified-notifications</a>
+                     </li>
+                     <li>
+                        <a href="d0e4389.xhtml#d0e4389" title="Section 5.86: simplified-oauth">5.86. simplified-oauth</a>
+                     </li>
+                     <li>
+                        <a href="d0e4406.xhtml#d0e4406" title="Section 5.87: simplified-opds2">5.87. simplified-opds2</a>
+                     </li>
+                     <li>
+                        <a href="d0e4423.xhtml#d0e4423"
+                           title="Section 5.88: simplified-opds2-irradia">5.88. simplified-opds2-irradia</a>
+                     </li>
+                     <li>
+                        <a href="d0e4440.xhtml#d0e4440"
+                           title="Section 5.89: simplified-opds2-parser-api">5.89. simplified-opds2-parser-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4458.xhtml#d0e4458" title="Section 5.90: simplified-opds2-r2">5.90. simplified-opds2-r2</a>
+                     </li>
+                     <li>
+                        <a href="d0e4484.xhtml#d0e4484"
+                           title="Section 5.91: simplified-opds-auth-document">5.91. simplified-opds-auth-document</a>
+                     </li>
+                     <li>
+                        <a href="d0e4501.xhtml#d0e4501"
+                           title="Section 5.92: simplified-opds-auth-document-api">5.92. simplified-opds-auth-document-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4518.xhtml#d0e4518" title="Section 5.93: simplified-opds-core">5.93. simplified-opds-core</a>
+                     </li>
+                     <li>
+                        <a href="d0e4578.xhtml#d0e4578"
+                           title="Section 5.94: simplified-parser-api">5.94. simplified-parser-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4595.xhtml#d0e4595" title="Section 5.95: simplified-patron">5.95. simplified-patron</a>
+                     </li>
+                     <li>
+                        <a href="d0e4613.xhtml#d0e4613"
+                           title="Section 5.96: simplified-patron-api">5.96. simplified-patron-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4630.xhtml#d0e4630"
+                           title="Section 5.97: simplified-presentableerror-api">5.97. simplified-presentableerror-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4656.xhtml#d0e4656" title="Section 5.98: simplified-profiles">5.98. simplified-profiles</a>
+                     </li>
+                     <li>
+                        <a href="d0e4673.xhtml#d0e4673"
+                           title="Section 5.99: simplified-profiles-api">5.99. simplified-profiles-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4735.xhtml#d0e4735"
+                           title="Section 5.100: simplified-profiles-controller-api">5.100. simplified-profiles-controller-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4752.xhtml#d0e4752"
+                           title="Section 5.101: simplified-reader-api">5.101. simplified-reader-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4786.xhtml#d0e4786"
+                           title="Section 5.102: simplified-reader-bookmarks">5.102. simplified-reader-bookmarks</a>
+                     </li>
+                     <li>
+                        <a href="d0e4812.xhtml#d0e4812"
+                           title="Section 5.103: simplified-reader-bookmarks-api">5.103. simplified-reader-bookmarks-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4829.xhtml#d0e4829" title="Section 5.104: simplified-reports">5.104. simplified-reports</a>
+                     </li>
+                     <li>
+                        <a href="d0e4855.xhtml#d0e4855"
+                           title="Section 5.105: simplified-services-api">5.105. simplified-services-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4872.xhtml#d0e4872"
+                           title="Section 5.106: simplified-taskrecorder-api">5.106. simplified-taskrecorder-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e4889.xhtml#d0e4889" title="Section 5.107: simplified-tenprint">5.107. simplified-tenprint</a>
+                     </li>
+                     <li>
+                        <a href="d0e4916.xhtml#d0e4916" title="Section 5.108: simplified-tests">5.108. simplified-tests</a>
+                     </li>
+                     <li>
+                        <a href="d0e4942.xhtml#d0e4942"
+                           title="Section 5.109: simplified-tests-sandbox">5.109. simplified-tests-sandbox</a>
+                     </li>
+                     <li>
+                        <a href="d0e4959.xhtml#d0e4959" title="Section 5.110: simplified-threads">5.110. simplified-threads</a>
+                     </li>
+                     <li>
+                        <a href="d0e4976.xhtml#d0e4976"
+                           title="Section 5.111: simplified-ui-accounts">5.111. simplified-ui-accounts</a>
+                     </li>
+                     <li>
+                        <a href="d0e5002.xhtml#d0e5002"
+                           title="Section 5.112: simplified-ui-announcements">5.112. simplified-ui-announcements</a>
+                     </li>
+                     <li>
+                        <a href="d0e5028.xhtml#d0e5028"
+                           title="Section 5.113: simplified-ui-branding">5.113. simplified-ui-branding</a>
+                     </li>
+                     <li>
+                        <a href="d0e5046.xhtml#d0e5046"
+                           title="Section 5.114: simplified-ui-catalog">5.114. simplified-ui-catalog</a>
+                     </li>
+                     <li>
+                        <a href="d0e5214.xhtml#d0e5214"
+                           title="Section 5.115: simplified-ui-errorpage">5.115. simplified-ui-errorpage</a>
+                     </li>
+                     <li>
+                        <a href="d0e5231.xhtml#d0e5231"
+                           title="Section 5.116: simplified-ui-images">5.116. simplified-ui-images</a>
+                     </li>
+                     <li>
+                        <a href="d0e5267.xhtml#d0e5267"
+                           title="Section 5.117: simplified-ui-listeners-api">5.117. simplified-ui-listeners-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e5284.xhtml#d0e5284"
+                           title="Section 5.118: simplified-ui-navigation-tabs">5.118. simplified-ui-navigation-tabs</a>
+                     </li>
+                     <li>
+                        <a href="d0e5325.xhtml#d0e5325"
+                           title="Section 5.119: simplified-ui-onboarding">5.119. simplified-ui-onboarding</a>
+                     </li>
+                     <li>
+                        <a href="d0e5343.xhtml#d0e5343"
+                           title="Section 5.120: simplified-ui-profiles">5.120. simplified-ui-profiles</a>
+                     </li>
+                     <li>
+                        <a href="d0e5369.xhtml#d0e5369"
+                           title="Section 5.121: simplified-ui-screen">5.121. simplified-ui-screen</a>
+                     </li>
+                     <li>
+                        <a href="d0e5386.xhtml#d0e5386"
+                           title="Section 5.122: simplified-ui-settings">5.122. simplified-ui-settings</a>
+                     </li>
+                     <li>
+                        <a href="d0e5412.xhtml#d0e5412"
+                           title="Section 5.123: simplified-ui-splash">5.123. simplified-ui-splash</a>
+                     </li>
+                     <li>
+                        <a href="d0e5453.xhtml#d0e5453" title="Section 5.124: simplified-ui-theme">5.124. simplified-ui-theme</a>
+                     </li>
+                     <li>
+                        <a href="d0e5483.xhtml#d0e5483"
+                           title="Section 5.125: simplified-ui-thread">5.125. simplified-ui-thread</a>
+                     </li>
+                     <li>
+                        <a href="d0e5514.xhtml#d0e5514"
+                           title="Section 5.126: simplified-viewer-api">5.126. simplified-viewer-api</a>
+                     </li>
+                     <li>
+                        <a href="d0e5531.xhtml#d0e5531"
+                           title="Section 5.127: simplified-viewer-audiobook">5.127. simplified-viewer-audiobook</a>
+                     </li>
+                     <li>
+                        <a href="d0e5603.xhtml#d0e5603"
+                           title="Section 5.128: simplified-viewer-epub-readium2">5.128. simplified-viewer-epub-readium2</a>
+                     </li>
+                     <li>
+                        <a href="d0e5679.xhtml#d0e5679"
+                           title="Section 5.129: simplified-viewer-pdf">5.129. simplified-viewer-pdf</a>
+                     </li>
+                     <li>
+                        <a href="d0e5716.xhtml#d0e5716"
+                           title="Section 5.130: simplified-viewer-spi">5.130. simplified-viewer-spi</a>
+                     </li>
+                     <li>
+                        <a href="d0e5733.xhtml#d0e5733" title="Section 5.131: simplified-webview">5.131. simplified-webview</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="stNavigationFooter">
+         <div class="stNavigationFooterPrevTitle">4. Caches</div>
+         <div class="stNavigationFooterPrevLink">
+            <a href="d0e2062.xhtml"
+               title="d0e2062.xhtml#id_9a930a36-6527-4c93-8e96-c27eecdee7d5"
+               rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationFooterUpTitle">Front Matter</div>
+         <div class="stNavigationFooterUpLink">
+            <a href="index-m.xhtml" title="index-m.xhtml#d0e1" rel="up">Up</a>
+         </div>
+         <div class="stNavigationFooterNextTitle">5.1. org.librarysimplified.audiobook.api</div>
+         <div class="stNavigationFooterNextLink">
+            <a href="d0e2107.xhtml" title="d0e2107.xhtml#d0e2107" rel="next">Next</a>
+         </div>
+      </div>
+      <!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <meta http-equiv="content-type"
+            content="application/xhtml+xml; charset=utf-8"/>
+      <meta name="generator" content="com.io7m.xstructural/1.3.0-SNAPSHOT"/>
+      <link rel="stylesheet" type="text/css" href="reset.css"/>
+      <link rel="stylesheet" type="text/css" href="structural.css"/>
+      <link rel="stylesheet" type="text/css" href="document.css"/>
+      <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+      <meta name="DC.Creator" content="Mark Raynsford"/>
+      <meta name="DC.Date" content="2021-07-08T19:42:35Z"/>
+      <meta name="DC.Identifier" content="af39eadf-9d6a-42bf-91e2-a864b5dcf6b7"/>
+      <meta name="DC.Language" content="en"/>
+      <meta name="DC.Rights" content="Public Domain"/>
+      <meta name="DC.Title"
+            content="Simply Grievances: Problems With The Library Simplified Android Codebase"/>
+      <title>Simply Grievances: Problems With The Library Simplified Android Codebase: 5.127. simplified-viewer-audiobook</title>
+   </head>
+   <body><!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+      <div class="stNavigationHeader">
+         <div class="stNavigationHeaderPrevTitle">5.126. simplified-viewer-api</div>
+         <div class="stNavigationHeaderPrevLink">
+            <a href="d0e5514.xhtml" title="d0e5514.xhtml#d0e5514" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationHeaderUpTitle">5. Modules</div>
+         <div class="stNavigationHeaderUpLink">
+            <a href="d0e2105.xhtml"
+               title="d0e2105.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationHeaderNextTitle">5.128. simplified-viewer-epub-readium2</div>
+         <div class="stNavigationHeaderNextLink">
+            <a href="d0e5603.xhtml" title="d0e5603.xhtml#d0e5603" rel="next">Next</a>
+         </div>
+      </div>
+      <div class="stMain">
+         <div class="stRegion stSection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h1 class="stSectionTitle">
+                  <a id="d0e5531"
+                     href="#d0e5531"
+                     title="Section 5.127: simplified-viewer-audiobook">5.127. simplified-viewer-audiobook</a>
+               </h1>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.127.1: Issues"
+                     id="d0e5533"
+                     href="#d0e5533">5.127.1. Issues</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.127.1.1: Uses UIThread API"
+                     id="id_dd6878df-4fff-4625-ae40-51208c98c513"
+                     href="#id_dd6878df-4fff-4625-ae40-51208c98c513">5.127.1.1. Uses UIThread API</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5537"
+                  href="#d0e5537"
+                  title="Paragraph 5.127.1.1.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The module uses the <a class="stLink"
+                  href="d0e85.xhtml#id_5955c72f-6d78-40d2-89b0-57649ca0aff8"
+                  title="Subsection 2.10: Issue Class: UITHREAD">fundamentally flawed UI thread
+          </a> API.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5543"
+                  href="#d0e5543"
+                  title="Paragraph 5.127.1.1.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e85.xhtml#id_5955c72f-6d78-40d2-89b0-57649ca0aff8"
+                  title="Subsection 2.10: Issue Class: UITHREAD">UITHREAD</a>. Severity: Critical.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.127.1.2: Player Is Activity-Scoped"
+                     id="id_9e943b9b-7ac6-49b9-8306-dd4a6b044c77"
+                     href="#id_9e943b9b-7ac6-49b9-8306-dd4a6b044c77">5.127.1.2. Player Is Activity-Scoped</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5552"
+                  href="#d0e5552"
+                  title="Paragraph 5.127.1.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The audio book player instances are stored in the hosting activity. This often means that audio will stop
+            playing if the activity is destroyed by the system when the activity is in the background.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5554"
+                  href="#d0e5554"
+                  title="Paragraph 5.127.1.2.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e85.xhtml#id_c5636f09-f0af-46ca-8993-0c694f2e76d4"
+                  title="Subsection 2.7: Issue Class: LIFECYCLE">LIFECYCLE</a>. Severity: Major.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.127.1.3: Problematic Bookmark Storage"
+                     id="id_5bd904a9-37f9-4233-b180-c615fd4b1e9e"
+                     href="#id_5bd904a9-37f9-4233-b180-c615fd4b1e9e">5.127.1.3. Problematic Bookmark Storage</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5563"
+                  href="#d0e5563"
+                  title="Paragraph 5.127.1.3.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The audio player appears to have problems storing bookmarks. The most likely cause of this issue is a
+            combination of the application eagerly storing bookmarks in response to player position update events, and
+            the underlying player publishing invalid position updates. A first approach should be to implement a stream
+            of carefully-vetted events that represent the one and only means by which the application should be provoked
+            into storing a bookmark.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5565"
+                  href="#d0e5565"
+                  title="Paragraph 5.127.1.3.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e85.xhtml#id_f454641e-95b4-4513-b856-6dce9952c6ba"
+                  title="Subsection 2.3: Issue Class: BUG">BUG</a>. Severity: Major.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5571"
+                  href="#d0e5571"
+                  title="Paragraph 5.127.1.3.3">3</a>
+            </div>
+            <div class="stRegionContent">
+            Relevant issues: <a class="stLinkExternal"
+                  href="https://jira.nypl.org/browse/SMA-101"
+                  title="https://jira.nypl.org/browse/SMA-101">SMA-101</a>,
+            <a class="stLinkExternal"
+                  href="https://jira.nypl.org/browse/SMA-114"
+                  title="https://jira.nypl.org/browse/SMA-114">SMA-114</a>.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.127.1.4: Activity Listeners"
+                     id="id_83ae177b-a9a8-49d2-9048-6e53ed2bb79f"
+                     href="#id_83ae177b-a9a8-49d2-9048-6e53ed2bb79f">5.127.1.4. Activity Listeners</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5583"
+                  href="#d0e5583"
+                  title="Paragraph 5.127.1.4.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            Due to the design of the Audio Book API, the hosting Activity must communicate with Fragments using
+            old-style callback functions. This should be replaced with communcation via a ViewModel (the Audio Book
+            library predates ViewModels).
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5585"
+                  href="#d0e5585"
+                  title="Paragraph 5.127.1.4.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e85.xhtml#id_ade6440a-e336-4ec5-9000-6a4c6fb64a4c"
+                  title="Subsection 2.9: Issue Class: STYLE">STYLE</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.127.2: Module Link"
+                     id="d0e5593"
+                     href="#d0e5593">5.127.2. Module Link</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e5595"
+                  href="#d0e5595"
+                  title="Paragraph 5.127.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+          The module can be found
+          at <a class="stLinkExternal"
+                  href="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-viewer-audiobook"
+                  title="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-viewer-audiobook">
+          simplified-viewer-audiobook</a>.
+        </div>
+         </div>
+      </div>
+      <div class="stNavigationFooter">
+         <div class="stNavigationFooterPrevTitle">5.126. simplified-viewer-api</div>
+         <div class="stNavigationFooterPrevLink">
+            <a href="d0e5514.xhtml" title="d0e5514.xhtml#d0e5514" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationFooterUpTitle">5. Modules</div>
+         <div class="stNavigationFooterUpLink">
+            <a href="d0e2105.xhtml"
+               title="d0e2105.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationFooterNextTitle">5.128. simplified-viewer-epub-readium2</div>
+         <div class="stNavigationFooterNextLink">
+            <a href="d0e5603.xhtml" title="d0e5603.xhtml#d0e5603" rel="next">Next</a>
+         </div>
+      </div>
+      <!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+   </body>
+</html>
