@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <meta http-equiv="content-type"
+            content="application/xhtml+xml; charset=utf-8"/>
+      <meta name="generator" content="com.io7m.xstructural/1.3.0-SNAPSHOT"/>
+      <link rel="stylesheet" type="text/css" href="reset.css"/>
+      <link rel="stylesheet" type="text/css" href="structural.css"/>
+      <link rel="stylesheet" type="text/css" href="document.css"/>
+      <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+      <meta name="DC.Creator" content="Mark Raynsford"/>
+      <meta name="DC.Date" content="2021-07-08T19:42:35Z"/>
+      <meta name="DC.Identifier" content="af39eadf-9d6a-42bf-91e2-a864b5dcf6b7"/>
+      <meta name="DC.Language" content="en"/>
+      <meta name="DC.Rights" content="Public Domain"/>
+      <meta name="DC.Title"
+            content="Simply Grievances: Problems With The Library Simplified Android Codebase"/>
+      <title>Simply Grievances: Problems With The Library Simplified Android Codebase: 5.71. simplified-files</title>
+   </head>
+   <body><!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+      <div class="stNavigationHeader">
+         <div class="stNavigationHeaderPrevTitle">5.70. simplified-feeds-api</div>
+         <div class="stNavigationHeaderPrevLink">
+            <a href="d0e3876.xhtml" title="d0e3876.xhtml#d0e3876" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationHeaderUpTitle">5. Modules</div>
+         <div class="stNavigationHeaderUpLink">
+            <a href="d0e2087.xhtml"
+               title="d0e2087.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationHeaderNextTitle">5.72. simplified-futures</div>
+         <div class="stNavigationHeaderNextLink">
+            <a href="d0e3957.xhtml" title="d0e3957.xhtml#d0e3957" rel="next">Next</a>
+         </div>
+      </div>
+      <div class="stMain">
+         <div class="stRegion stSection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h1 class="stSectionTitle">
+                  <a id="d0e3919" href="#d0e3919" title="Section 5.71: simplified-files">5.71. simplified-files</a>
+               </h1>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.71.1: Issues"
+                     id="d0e3921"
+                     href="#d0e3921">5.71.1. Issues</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.71.1.1: Dead Code"
+                     id="id_2caf3091-a7cd-4072-88f8-5c2f7c421379"
+                     href="#id_2caf3091-a7cd-4072-88f8-5c2f7c421379">5.71.1.1. Dead Code</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e3925"
+                  href="#d0e3925"
+                  title="Paragraph 5.71.1.1.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The module contains numerous unused functions. These are easy to locate, because the module only contains a
+            couple of classes, and the IDE flags the methods as unused. They can be removed mechanically.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e3927"
+                  href="#d0e3927"
+                  title="Paragraph 5.71.1.1.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e85.xhtml#id_823bb39a-f9de-4bf6-b9c8-ebb5f98be522"
+                  title="Subsection 2.5: Issue Class: DEADCODE">DEADCODE</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.71.1.2: Dead Workarounds"
+                     id="id_39799e67-cb24-4c28-94e1-af13d9901c4a"
+                     href="#id_39799e67-cb24-4c28-94e1-af13d9901c4a">5.71.1.2. Dead Workarounds</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e3936"
+                  href="#d0e3936"
+                  title="Paragraph 5.71.1.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The module contains some workarounds for Android's broken external storage system. The application no longer
+            uses external storage, so these workarounds are no longer necessary.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e3938"
+                  href="#d0e3938"
+                  title="Paragraph 5.71.1.2.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e85.xhtml#id_dac29d65-63f0-4a76-b4ce-5dcc88320a5d"
+                  title="Subsection 2.8: Issue Class: OBSOLETE">OBSOLETE</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.71.2: Module Link"
+                     id="d0e3946"
+                     href="#d0e3946">5.71.2. Module Link</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e3948"
+                  href="#d0e3948"
+                  title="Paragraph 5.71.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+          The module can be found
+          at <a class="stLinkExternal"
+                  href="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-files"
+                  title="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-files">
+          simplified-files</a>.
+        </div>
+         </div>
+      </div>
+      <div class="stNavigationFooter">
+         <div class="stNavigationFooterPrevTitle">5.70. simplified-feeds-api</div>
+         <div class="stNavigationFooterPrevLink">
+            <a href="d0e3876.xhtml" title="d0e3876.xhtml#d0e3876" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationFooterUpTitle">5. Modules</div>
+         <div class="stNavigationFooterUpLink">
+            <a href="d0e2087.xhtml"
+               title="d0e2087.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationFooterNextTitle">5.72. simplified-futures</div>
+         <div class="stNavigationFooterNextLink">
+            <a href="d0e3957.xhtml" title="d0e3957.xhtml#d0e3957" rel="next">Next</a>
+         </div>
+      </div>
+      <!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+   </body>
+</html>

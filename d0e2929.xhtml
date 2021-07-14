@@ -17,7 +17,7 @@
       <meta name="DC.Rights" content="Public Domain"/>
       <meta name="DC.Title"
             content="Simply Grievances: Problems With The Library Simplified Android Codebase"/>
-      <title>Simply Grievances: Problems With The Library Simplified Android Codebase: 1. Orientation</title>
+      <title>Simply Grievances: Problems With The Library Simplified Android Codebase: 5.37. simplified-accounts-json</title>
    </head>
    <body><!--
   Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
@@ -43,19 +43,19 @@
          </div>
       </div>
       <div class="stNavigationHeader">
-         <div class="stNavigationHeaderPrevTitle">Front Matter</div>
+         <div class="stNavigationHeaderPrevTitle">5.36. simplified-accounts-database-api</div>
          <div class="stNavigationHeaderPrevLink">
-            <a href="index-m.xhtml" title="index-m.xhtml#d0e1" rel="prev">Previous</a>
+            <a href="d0e2912.xhtml" title="d0e2912.xhtml#d0e2912" rel="prev">Previous</a>
          </div>
-         <div class="stNavigationHeaderUpTitle">Front Matter</div>
+         <div class="stNavigationHeaderUpTitle">5. Modules</div>
          <div class="stNavigationHeaderUpLink">
-            <a href="index-m.xhtml" title="index-m.xhtml#d0e1" rel="up">Up</a>
+            <a href="d0e2087.xhtml"
+               title="d0e2087.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
          </div>
-         <div class="stNavigationHeaderNextTitle">2. Issue Classes</div>
+         <div class="stNavigationHeaderNextTitle">5.38. simplified-accounts-registry</div>
          <div class="stNavigationHeaderNextLink">
-            <a href="d0e85.xhtml"
-               title="d0e85.xhtml#id_ec5b77d0-2fed-4e6a-b56c-c381d21b97be"
-               rel="next">Next</a>
+            <a href="d0e2962.xhtml" title="d0e2962.xhtml#d0e2962" rel="next">Next</a>
          </div>
       </div>
       <div class="stMain">
@@ -63,117 +63,102 @@
             <div class="stRegionMargin"><!--Empty--></div>
             <div class="stRegionContent">
                <h1 class="stSectionTitle">
-                  <a id="d0e31" href="#d0e31" title="Section 1: Orientation">1. Orientation</a>
+                  <a id="d0e2929"
+                     href="#d0e2929"
+                     title="Section 5.37: simplified-accounts-json">5.37. simplified-accounts-json</a>
                </h1>
             </div>
          </div>
-         <div class="stRegion stParagraph">
-            <div class="stRegionMargin">
-               <a class="stParagraphNumber"
-                  id="d0e33"
-                  href="#d0e33"
-                  title="Paragraph 1.1">1</a>
-            </div>
-            <div class="stRegionContent">
-      This book represents a comprehensive examination of the issues with the <span class="stTerm term">Library Simplified
-    </span> Android client codebases. Specifically, problems are documented for the following codebases:
-    </div>
-         </div>
-         <div class="stRegion stFootnotes">
+         <div class="stRegion stSubsection">
             <div class="stRegionMargin"><!--Empty--></div>
             <div class="stRegionContent">
-               <h3 class="stFormalItemTitle">
-                  <a class="stFormalItemTitle"
-                     title="Formal Item 1.2: Documented Codebases"
-                     id="d0e39"
-                     href="#d0e39">1.2. Documented Codebases</a>
-               </h3>
-               <div class="stFormalItem">
-                  <ul class="stListUnordered">
-                     <li class="stItem">
-                        <a class="stLinkExternal"
-                           href="https://github.com/NYPL-Simplified/Simplified-Android-Core"
-                           title="https://github.com/NYPL-Simplified/Simplified-Android-Core">Simplified-Android-Core
-          </a>
-                     </li>
-                     <li class="stItem">
-                        <a class="stLinkExternal"
-                           href="https://github.com/NYPL-Simplified/audiobook-android"
-                           title="https://github.com/NYPL-Simplified/audiobook-android">audiobook-android</a>
-                     </li>
-                     <li class="stItem">
-                        <a class="stLinkExternal"
-                           href="https://github.com/NYPL-Simplified/Simplified-R2-Android"
-                           title="https://github.com/NYPL-Simplified/Simplified-R2-Android">Simplified-R2-Android
-          </a>
-                     </li>
-                  </ul>
-               </div>
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.37.1: Issues"
+                     id="d0e2931"
+                     href="#d0e2931">5.37.1. Issues</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.37.1.1: Unused annotationsURI Field"
+                     id="id_b10e8b2c-b080-4042-b878-d92dc02db48f"
+                     href="#id_b10e8b2c-b080-4042-b878-d92dc02db48f">5.37.1.1. Unused annotationsURI Field</a>
+               </h2>
             </div>
          </div>
          <div class="stRegion stParagraph">
             <div class="stRegionMargin">
                <a class="stParagraphNumber"
-                  id="d0e63"
-                  href="#d0e63"
-                  title="Paragraph 1.3">3</a>
+                  id="d0e2935"
+                  href="#d0e2935"
+                  title="Paragraph 5.37.1.1.1">1</a>
             </div>
             <div class="stRegionContent">
-      The <a class="stLink"
-                  href="d0e85.xhtml#id_ec5b77d0-2fed-4e6a-b56c-c381d21b97be"
-                  title="Section 2: Issue Classes">Issue Classes</a> section documents the classes of
-      issues seen in all of the codebases, and the
-      <a class="stLink"
-                  href="d0e2087.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
-                  title="Section 5: Modules">Modules</a>
-      section describes specific instances of the issues in each module.
-    </div>
+            The <span class="stTerm class">AccountProvidersJSON</span> class contains code to read an
+            <span class="stTerm field">annotationsURI</span>
+            field from serialized accounts. This field has not been used for quite a while due to the annotations URI
+            being retrieved from the authentication document in modern versions of the application.
+          </div>
          </div>
          <div class="stRegion stParagraph">
             <div class="stRegionMargin">
                <a class="stParagraphNumber"
-                  id="d0e72"
-                  href="#d0e72"
-                  title="Paragraph 1.4">4</a>
+                  id="d0e2944"
+                  href="#d0e2944"
+                  title="Paragraph 5.37.1.1.2">2</a>
             </div>
             <div class="stRegionContent">
-      Additionally, this book attempts to identify all
-      <a class="stLink"
-                  href="d0e2044.xhtml#id_9a930a36-6527-4c93-8e96-c27eecdee7d5"
-                  title="Section 4: Caches">caches</a>
-      used in the applications, because caches are typically a source of many problems.
-    </div>
+            Issue class: <a class="stLink"
+                  href="d0e85.xhtml#id_dac29d65-63f0-4a76-b4ce-5dcc88320a5d"
+                  title="Subsection 2.8: Issue Class: OBSOLETE">OBSOLETE</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.37.2: Module Link"
+                     id="d0e2952"
+                     href="#d0e2952">5.37.2. Module Link</a>
+               </h2>
+            </div>
          </div>
          <div class="stRegion stParagraph">
             <div class="stRegionMargin">
                <a class="stParagraphNumber"
-                  id="d0e78"
-                  href="#d0e78"
-                  title="Paragraph 1.5">5</a>
+                  id="d0e2954"
+                  href="#d0e2954"
+                  title="Paragraph 5.37.2.1">1</a>
             </div>
             <div class="stRegionContent">
-      This book is available via an OPDS feed hosted at
-      <a class="stLinkExternal"
-                  href="https://io7m.github.io/SimplyGrievances/feed.xml"
-                  title="https://io7m.github.io/SimplyGrievances/feed.xml">
-        https://io7m.github.io/SimplyGrievances/feed.xml</a>.
-    </div>
+          The module can be found
+          at <a class="stLinkExternal"
+                  href="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-json"
+                  title="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-accounts-json">
+          simplified-accounts-json</a>.
+        </div>
          </div>
       </div>
       <div class="stNavigationFooter">
-         <div class="stNavigationFooterPrevTitle">Front Matter</div>
+         <div class="stNavigationFooterPrevTitle">5.36. simplified-accounts-database-api</div>
          <div class="stNavigationFooterPrevLink">
-            <a href="index-m.xhtml" title="index-m.xhtml#d0e1" rel="prev">Previous</a>
+            <a href="d0e2912.xhtml" title="d0e2912.xhtml#d0e2912" rel="prev">Previous</a>
          </div>
-         <div class="stNavigationFooterUpTitle">Front Matter</div>
+         <div class="stNavigationFooterUpTitle">5. Modules</div>
          <div class="stNavigationFooterUpLink">
-            <a href="index-m.xhtml" title="index-m.xhtml#d0e1" rel="up">Up</a>
+            <a href="d0e2087.xhtml"
+               title="d0e2087.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
          </div>
-         <div class="stNavigationFooterNextTitle">2. Issue Classes</div>
+         <div class="stNavigationFooterNextTitle">5.38. simplified-accounts-registry</div>
          <div class="stNavigationFooterNextLink">
-            <a href="d0e85.xhtml"
-               title="d0e85.xhtml#id_ec5b77d0-2fed-4e6a-b56c-c381d21b97be"
-               rel="next">Next</a>
+            <a href="d0e2962.xhtml" title="d0e2962.xhtml#d0e2962" rel="next">Next</a>
          </div>
       </div>
       <!--

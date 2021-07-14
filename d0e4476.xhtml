@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+      <meta http-equiv="content-type"
+            content="application/xhtml+xml; charset=utf-8"/>
+      <meta name="generator" content="com.io7m.xstructural/1.3.0-SNAPSHOT"/>
+      <link rel="stylesheet" type="text/css" href="reset.css"/>
+      <link rel="stylesheet" type="text/css" href="structural.css"/>
+      <link rel="stylesheet" type="text/css" href="document.css"/>
+      <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+      <meta name="DC.Creator" content="Mark Raynsford"/>
+      <meta name="DC.Date" content="2021-07-08T19:42:35Z"/>
+      <meta name="DC.Identifier" content="af39eadf-9d6a-42bf-91e2-a864b5dcf6b7"/>
+      <meta name="DC.Language" content="en"/>
+      <meta name="DC.Rights" content="Public Domain"/>
+      <meta name="DC.Title"
+            content="Simply Grievances: Problems With The Library Simplified Android Codebase"/>
+      <title>Simply Grievances: Problems With The Library Simplified Android Codebase: 5.93. simplified-opds-core</title>
+   </head>
+   <body><!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+      <div class="stNavigationHeader">
+         <div class="stNavigationHeaderPrevTitle">5.92. simplified-opds-auth-document-api</div>
+         <div class="stNavigationHeaderPrevLink">
+            <a href="d0e4459.xhtml" title="d0e4459.xhtml#d0e4459" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationHeaderUpTitle">5. Modules</div>
+         <div class="stNavigationHeaderUpLink">
+            <a href="d0e2087.xhtml"
+               title="d0e2087.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationHeaderNextTitle">5.94. simplified-parser-api</div>
+         <div class="stNavigationHeaderNextLink">
+            <a href="d0e4536.xhtml" title="d0e4536.xhtml#d0e4536" rel="next">Next</a>
+         </div>
+      </div>
+      <div class="stMain">
+         <div class="stRegion stSection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h1 class="stSectionTitle">
+                  <a id="d0e4476"
+                     href="#d0e4476"
+                     title="Section 5.93: simplified-opds-core">5.93. simplified-opds-core</a>
+               </h1>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.93.1: Issues"
+                     id="d0e4478"
+                     href="#d0e4478">5.93.1. Issues</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.93.1.1: Complicated Parser Code"
+                     id="id_8630e0b7-15d4-495b-8d99-50edfabd877a"
+                     href="#id_8630e0b7-15d4-495b-8d99-50edfabd877a">5.93.1.1. Complicated Parser Code</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4482"
+                  href="#d0e4482"
+                  title="Paragraph 5.93.1.1.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The module contains rather tangled, complicated, and organically grown code to parse OPDS 1.2 streams. It's
+            unclear if it correctly handles any of OPDS 1.2 in a compliant manner. It is also some of the oldest code in
+            the application, and is very hard to understand.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4484"
+                  href="#d0e4484"
+                  title="Paragraph 5.93.1.1.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e85.xhtml#id_33d4dc0c-45f1-4b3b-bad8-019fbcbcca78"
+                  title="Subsection 2.4: Issue Class: COMPLEX">COMPLEX</a>. Severity: Major.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4490"
+                  href="#d0e4490"
+                  title="Paragraph 5.93.1.1.3">3</a>
+            </div>
+            <div class="stRegionContent">
+            Relevant issues: <a class="stLinkExternal"
+                  href="https://jira.nypl.org/browse/SMA-152"
+                  title="https://jira.nypl.org/browse/SMA-152">SMA-152</a>.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.93.1.2: Hand-Written Data Classes"
+                     id="id_8cac79ca-0804-4da5-a1f2-228e499bba0b"
+                     href="#id_8cac79ca-0804-4da5-a1f2-228e499bba0b">5.93.1.2. Hand-Written Data Classes</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4499"
+                  href="#d0e4499"
+                  title="Paragraph 5.93.1.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The module contains many hand-written data classes. These should ideally be replaced with Kotlin data
+            classes.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4501"
+                  href="#d0e4501"
+                  title="Paragraph 5.93.1.2.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e85.xhtml#id_dac29d65-63f0-4a76-b4ce-5dcc88320a5d"
+                  title="Subsection 2.8: Issue Class: OBSOLETE">OBSOLETE</a>. Severity: Minor.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.93.1.3: Availability Inference May Be Incorrect"
+                     id="id_12b0d81f-4aac-4938-baf3-22334541a20d"
+                     href="#id_12b0d81f-4aac-4938-baf3-22334541a20d">5.93.1.3. Availability Inference May Be Incorrect</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4510"
+                  href="#d0e4510"
+                  title="Paragraph 5.93.1.3.1">1</a>
+            </div>
+            <div class="stRegionContent">
+            The code may incorrectly infer availability information for OPDS feed entries. This may cause books to
+            incorrectly appear to be available for loan, or to be unavailable.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4512"
+                  href="#d0e4512"
+                  title="Paragraph 5.93.1.3.2">2</a>
+            </div>
+            <div class="stRegionContent">
+            Issue class: <a class="stLink"
+                  href="d0e85.xhtml#id_33d4dc0c-45f1-4b3b-bad8-019fbcbcca78"
+                  title="Subsection 2.4: Issue Class: COMPLEX">COMPLEX</a>. Severity: Major.
+          </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4518"
+                  href="#d0e4518"
+                  title="Paragraph 5.93.1.3.3">3</a>
+            </div>
+            <div class="stRegionContent">
+            Relevant issues: <a class="stLinkExternal"
+                  href="https://jira.nypl.org/browse/SMA-190"
+                  title="https://jira.nypl.org/browse/SMA-190">SMA-190</a>.
+          </div>
+         </div>
+         <div class="stRegion stSubsection">
+            <div class="stRegionMargin"><!--Empty--></div>
+            <div class="stRegionContent">
+               <h2 class="stSubsectionTitle">
+                  <a class="stSubsectionTitle"
+                     title="Subsection 5.93.2: Module Link"
+                     id="d0e4526"
+                     href="#d0e4526">5.93.2. Module Link</a>
+               </h2>
+            </div>
+         </div>
+         <div class="stRegion stParagraph">
+            <div class="stRegionMargin">
+               <a class="stParagraphNumber"
+                  id="d0e4528"
+                  href="#d0e4528"
+                  title="Paragraph 5.93.2.1">1</a>
+            </div>
+            <div class="stRegionContent">
+          The module can be found
+          at <a class="stLinkExternal"
+                  href="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-opds-core"
+                  title="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-opds-core">
+          simplified-opds-core</a>.
+        </div>
+         </div>
+      </div>
+      <div class="stNavigationFooter">
+         <div class="stNavigationFooterPrevTitle">5.92. simplified-opds-auth-document-api</div>
+         <div class="stNavigationFooterPrevLink">
+            <a href="d0e4459.xhtml" title="d0e4459.xhtml#d0e4459" rel="prev">Previous</a>
+         </div>
+         <div class="stNavigationFooterUpTitle">5. Modules</div>
+         <div class="stNavigationFooterUpLink">
+            <a href="d0e2087.xhtml"
+               title="d0e2087.xhtml#id_104c09e6-6870-4981-b151-438d74b891ac"
+               rel="up">Up</a>
+         </div>
+         <div class="stNavigationFooterNextTitle">5.94. simplified-parser-api</div>
+         <div class="stNavigationFooterNextLink">
+            <a href="d0e4536.xhtml" title="d0e4536.xhtml#d0e4536" rel="next">Next</a>
+         </div>
+      </div>
+      <!--
+  Copyright © 2021 Mark Raynsford <code@io7m.com> https://www.io7m.com
+
+  Permission to use, copy, modify, and/or distribute this software for any
+  purpose with or without fee is hereby granted, provided that the above
+  copyright notice and this permission notice appear in all copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+  IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+      <div class="brandingContainer">
+         <div class="branding">
+            <a href="https://www.io7m.com/">io7m</a> |
+    <a href="index.xhtml">single-page</a> |
+    <a href="index-m.xhtml">multi-page</a> |
+    <a href="simplyGrievances.epub">epub</a>
+         </div>
+      </div>
+   </body>
+</html>
