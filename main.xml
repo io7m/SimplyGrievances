@@ -46,8 +46,9 @@
       section describes specific instances of the issues in each module.
     </Paragraph>
     <Paragraph>
-      Additionally, this book attempts to identify all <Term type="term">caches</Term> used in the applications, because
-      caches are typically a source of many problems.
+      Additionally, this book attempts to identify all
+      <Link target="9a930a36-6527-4c93-8e96-c27eecdee7d5">caches</Link>
+      used in the applications, because caches are typically a source of many problems.
     </Paragraph>
   </Section>
 
@@ -204,9 +205,26 @@
     </FormalItem>
   </Section>
 
-  <Section title="Caches">
+  <Section title="Caches"
+           id="9a930a36-6527-4c93-8e96-c27eecdee7d5">
     <Paragraph>
-      This section provides a complete listing of all of the caches used in the codebases.
+      This section provides a complete listing of all of the caches used in the codebases. A
+      <Term type="term">cache</Term>
+      in this case is strictly defined to be a mechanism where the application stores some piece of data either in
+      memory or on disk in order to avoid having to execute a more expensive operation to fetch data from the network.
+      It should be understood as a mechanism purely intended to improve
+      <Term type="term">performance</Term>
+      and
+      <Term type="term">responsiveness</Term>. A cache is typically a time-limited mechanism where the contents of the
+      cache are expected to be volatile; if the cache doesn't contain an entry for some required piece of data, then the
+      data can simply be fetched and cached, and the application will continue to work without issue. Data is typically
+      automated evicted from the cache when a time limit expires. This is
+      <Term type="emphatic">not</Term>
+      the same as code that keeps a copy of some important piece of data in order to be able to operate without access
+      to the original data. A good example of the latter is the audio book player working from a manifest that the
+      application has downloaded and saved at an earlier date - the audio book player would not be able to work without
+      network connectivity if the manifest had not been downloaded and saved. This is not an issue of performance, but
+      an issue of being able to actually do work at all if the network connection is down.
     </Paragraph>
     <FormalItem title="Caches">
       <xi:include href="caches.xml"/>
