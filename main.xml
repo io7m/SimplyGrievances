@@ -3272,7 +3272,7 @@
       </Subsection>
     </Section>
 
-    <Section title="simplified-ui-thread"
+    <Section title="simplified-ui-thread-api"
              tableOfContents="false">
       <Subsection title="Issues">
         <Subsection title="Fundamentally Broken"
@@ -3291,8 +3291,8 @@
       <Subsection title="Module Link">
         <Paragraph>
           The module can be found
-          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-ui-thread">
-          simplified-ui-thread</LinkExternal>.
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-Android-Core/tree/develop/simplified-ui-thread-api">
+          simplified-ui-thread-api</LinkExternal>.
         </Paragraph>
       </Subsection>
     </Section>
