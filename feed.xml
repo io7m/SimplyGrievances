@@ -17,6 +17,10 @@
     <link href="bookCover.jpg"
           type="image/jpeg"
           rel="http://opds-spec.org/image"/>
+    <link href="bookCover.jpg"
+          type="image/jpeg"
+          rel="http://opds-spec.org/image/thumbnail"/>
+
     <link href="simplyGrievances.epub"
           rel="http://opds-spec.org/acquisition/open-access"
           type="application/epub+zip"/>
