@@ -50,6 +50,11 @@
       <Link target="9a930a36-6527-4c93-8e96-c27eecdee7d5">caches</Link>
       used in the applications, because caches are typically a source of many problems.
     </Paragraph>
+    <Paragraph>
+      This book is available via an OPDS feed hosted at
+      <LinkExternal target="https://io7m.github.io/SimplyGrievances/feed.xml">
+        https://io7m.github.io/SimplyGrievances/feed.xml</LinkExternal>.
+    </Paragraph>
   </Section>
 
   <Section title="Issue Classes"
