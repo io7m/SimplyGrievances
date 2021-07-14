@@ -7,6 +7,24 @@
    </s:Columns>
    <s:Row>
       <s:Cell type="cellIssue">
+         <s:Link target="d3f400b8-b27b-4b6e-8243-06d6a89a11a2">PlayerFragment Uses UIThread</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="5955c72f-6d78-40d2-89b0-57649ca0aff8">UITHREAD</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Critical</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="22d34626-0878-4cc0-91aa-60eadf88cb9d">Audio Player Can Delete Accounts</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Critical</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
          <s:Link target="33b42c1a-ad72-44df-814a-fac3d394b269">Book IDs Are Not Unique Enough</s:Link>
       </s:Cell>
       <s:Cell type="cellClass">
@@ -58,6 +76,15 @@
          <s:Link target="5955c72f-6d78-40d2-89b0-57649ca0aff8">UITHREAD</s:Link>
       </s:Cell>
       <s:Cell type="cellSeverity">Critical</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="e9875073-cefc-4aba-a806-36829f3bf993">Designed By Committee TOC</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Major</s:Cell>
    </s:Row>
    <s:Row>
       <s:Cell type="cellIssue">
@@ -238,6 +265,69 @@
          <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
       </s:Cell>
       <s:Cell type="cellSeverity">Major</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="7c127c37-ea0d-4d98-8ed2-56fe656d38ad">Uses OkHTTP Directly</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="27e5d364-f6ce-4f2e-9c3c-6165169a08ed">Uses OkHTTP Directly</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="84d24182-c289-4228-84a3-81b9cc6b9eca">Module Might Be Obsolete</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="26dc3e7c-40dc-4d2c-9a15-c836a02afe5c">Incorrect Treatment Of Null Chapter Titles</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="7362868b-461d-44f6-b0c4-f0007eef370b">Multiple Uses Of Assert</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="4f7aff4d-4619-4b9e-9916-38f81be64bdb">Activity Listeners</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="ade6440a-e336-4ec5-9000-6a4c6fb64a4c">STYLE</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
+         <s:Link target="bdcd5bd3-824e-47ae-a24e-1f05fa5d0578">Player Colors Taken From Theme</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
    </s:Row>
    <s:Row>
       <s:Cell type="cellIssue">

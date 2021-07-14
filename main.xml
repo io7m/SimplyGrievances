@@ -186,6 +186,10 @@
         <LinkExternal target="https://github.com/ReactiveX/RxAndroid">RxAndroid</LinkExternal>
         to control event streams in most cases.
       </Paragraph>
+      <Paragraph>
+        It can be assumed that any use of the original API approach will be a source of application crashes and critical
+        bugs.
+      </Paragraph>
     </Subsection>
 
     <Footnote id="c16f4f1e-08a0-4a83-8da2-62a82173aa15">
@@ -234,6 +238,620 @@
   <Section title="Modules"
            id="104c09e6-6870-4981-b151-438d74b891ac"
            tableOfContentsDepth="1">
+
+    <Section title="org.librarysimplified.audiobook.api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.api">
+          org.librarysimplified.audiobook.api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.demo"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.demo">
+          org.librarysimplified.audiobook.demo</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.downloads"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Uses OkHTTP Directly"
+                    id="7c127c37-ea0d-4d98-8ed2-56fe656d38ad"
+                    type="issue">
+          <Paragraph>
+            The module uses the <Term type="package">OkHTTP</Term> package directly rather than using the Library
+            Simplified HTTP client. This means that application-wide policies are not set for the Audio Books API.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.downloads">
+          org.librarysimplified.audiobook.downloads</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.feedbooks"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.feedbooks">
+          org.librarysimplified.audiobook.feedbooks</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.json_canon"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.json_canon">
+          org.librarysimplified.audiobook.json_canon</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.http"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Uses OkHTTP Directly"
+                    id="27e5d364-f6ce-4f2e-9c3c-6165169a08ed"
+                    type="issue">
+          <Paragraph>
+            The module uses the <Term type="package">OkHTTP</Term> package directly rather than using the Library
+            Simplified HTTP client. This means that application-wide policies are not set for the Audio Books API.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.http">
+          org.librarysimplified.audiobook.http</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.json_web_token"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Module Might Be Obsolete"
+                    type="issue"
+                    id="84d24182-c289-4228-84a3-81b9cc6b9eca">
+          <Paragraph>
+            The module was created to assist with Feedbooks integration, but the actual implementation ended up using a
+            third party JSON Web Token library. This module may therefore be obsolete.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.json_web_token">
+          org.librarysimplified.audiobook.json_web_token</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.lcp.license_status"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.lcp.license_status">
+          org.librarysimplified.audiobook.lcp.license_status</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.license_check.api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.license_check.api">
+          org.librarysimplified.audiobook.license_check.api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.license_check.spi"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.license_check.spi">
+          org.librarysimplified.audiobook.license_check.spi</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.manifest.api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.manifest.api">
+          org.librarysimplified.audiobook.manifest.api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.manifest_fulfill.api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.manifest_fulfill.api">
+          org.librarysimplified.audiobook.manifest_fulfill.api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.manifest_fulfill.basic"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.manifest_fulfill.basic">
+          org.librarysimplified.audiobook.manifest_fulfill.basic</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.manifest_fulfill.opa"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.manifest_fulfill.opa">
+          org.librarysimplified.audiobook.manifest_fulfill.opa</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.manifest_fulfill.spi"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.manifest_fulfill.spi">
+          org.librarysimplified.audiobook.manifest_fulfill.spi</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.manifest_parser.api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.manifest_parser.api">
+          org.librarysimplified.audiobook.manifest_parser.api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.manifest_parser.extension_spi"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.manifest_parser.extension_spi">
+          org.librarysimplified.audiobook.manifest_parser.extension_spi</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.manifest_parser.webpub"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Incorrect Treatment Of Null Chapter Titles"
+                    id="26dc3e7c-40dc-4d2c-9a15-c836a02afe5c"
+                    type="issue">
+          <Paragraph>
+            The parser seems to coerce <Term type="constant">null</Term> chapter titles to a value instead of treating
+            them as if the titles were simply not specified.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</Link>. Severity: Minor.
+          </Paragraph>
+          <Paragraph>
+            Relevant issues: <LinkExternal target="https://jira.nypl.org/browse/SIMPLY-3026">SIMPLY-3026</LinkExternal>.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.manifest_parser.webpub">
+          org.librarysimplified.audiobook.manifest_parser.webpub</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.mocking"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.mocking">
+          org.librarysimplified.audiobook.mocking</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.open_access"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="Multiple Uses Of Assert"
+                    type="issue"
+                    id="7362868b-461d-44f6-b0c4-f0007eef370b">
+          <Paragraph>
+            The codebases uses the <Term type="function">assert</Term> method instead of the Kotlin <Term type="function">
+            check
+          </Term> method. The latter is always present in builds, whereas the former is removed for release builds.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.open_access">
+          org.librarysimplified.audiobook.open_access</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.parser.api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.parser.api">
+          org.librarysimplified.audiobook.parser.api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.rbdigital"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.rbdigital">
+          org.librarysimplified.audiobook.rbdigital</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.tests"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.tests">
+          org.librarysimplified.audiobook.tests</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.tests.device"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.tests.device">
+          org.librarysimplified.audiobook.tests.device</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.tests.sandbox"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.tests.sandbox">
+          org.librarysimplified.audiobook.tests.sandbox</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.audiobook.views"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Subsection title="PlayerFragment Uses UIThread"
+                    id="d3f400b8-b27b-4b6e-8243-06d6a89a11a2"
+                    type="issue">
+          <Paragraph>
+            The <Term type="class">PlayerFragment</Term> class uses the
+            <Link target="5955c72f-6d78-40d2-89b0-57649ca0aff8">fundamentally flawed UI thread</Link>
+            API.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="5955c72f-6d78-40d2-89b0-57649ca0aff8">UITHREAD</Link>. Severity: Critical.
+          </Paragraph>
+        </Subsection>
+        <Subsection title="Activity Listeners"
+                    id="4f7aff4d-4619-4b9e-9916-38f81be64bdb"
+                    type="issue">
+          <Paragraph>
+            The hosting Activity must communicate with Fragments using old-style callback functions. This should be
+            replaced with communcation via a ViewModel (the Audio Book library predates ViewModels).
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="ade6440a-e336-4ec5-9000-6a4c6fb64a4c">STYLE</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+        <Subsection title="Designed By Committee TOC"
+                    type="issue"
+                    id="e9875073-cefc-4aba-a806-36829f3bf993">
+          <Paragraph>
+            The design for the table of contents UI was essentially put together via a committee and has numerous
+            shortcomings. Firstly, it is aesthetically ugly. Secondly, there is no way for users to see details of any
+            errors that may occur when downloading chapters. This harms the ability of developers to debug issues.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</Link>. Severity: Major.
+          </Paragraph>
+        </Subsection>
+        <Subsection title="Player Colors Taken From Theme"
+                    type="issue"
+                    id="bdcd5bd3-824e-47ae-a24e-1f05fa5d0578">
+          <Paragraph>
+            The Audio Book player UI takes colors from the current application theme. This may present difficulties if
+            the application wants to move to a partially dynamic, neutral color scheme.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="061f1764-bbdf-4e79-9eaa-eb28f22fe0ea">DESIGN</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
+        <Subsection title="Audio Player Can Delete Accounts"
+                    id="22d34626-0878-4cc0-91aa-60eadf88cb9d"
+                    type="issue">
+          <Paragraph>
+            A serious and as-yet-unexplained bug appears to be present in the audio book player where exiting an audio
+            book can delete or corrupt the application account containing the audio book.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</Link>. Severity: Critical.
+          </Paragraph>
+          <Paragraph>
+            Relevant issues: <LinkExternal target="https://www.notion.so/lyrasis/5694f5b2d40c4baea0d97782a3141cef">
+            https://www.notion.so/lyrasis/5694f5b2d40c4baea0d97782a3141cef</LinkExternal>.
+          </Paragraph>
+        </Subsection>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/audiobooks-android/tree/develop/org.librarysimplified.audiobook.views">
+          org.librarysimplified.audiobook.views</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.r2.api"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-R2-Android/tree/develop/org.librarysimplified.r2.api">
+          org.librarysimplified.r2.api</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.r2.demo"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-R2-Android/tree/develop/org.librarysimplified.r2.demo">
+          org.librarysimplified.r2.demo</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.r2.tests"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-R2-Android/tree/develop/org.librarysimplified.r2.tests">
+          org.librarysimplified.r2.tests</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.r2.ui_thread"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-R2-Android/tree/develop/org.librarysimplified.r2.ui_thread">
+          org.librarysimplified.r2.ui_thread</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.r2.vanilla"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-R2-Android/tree/develop/org.librarysimplified.r2.vanilla">
+          org.librarysimplified.r2.vanilla</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
+
+    <Section title="org.librarysimplified.r2.views"
+             tableOfContents="false">
+      <Subsection title="Issues">
+        <Paragraph>
+          There are no recognised issues in this module.
+        </Paragraph>
+      </Subsection>
+      <Subsection title="Module Link">
+        <Paragraph>
+          The module can be found
+          at <LinkExternal target="https://github.com/NYPL-Simplified/Simplified-R2-Android/tree/develop/org.librarysimplified.r2.views">
+          org.librarysimplified.r2.views</LinkExternal>.
+        </Paragraph>
+      </Subsection>
+    </Section>
 
     <Section title="simplified-accessibility"
              tableOfContents="false">
@@ -2803,16 +3421,15 @@
       </Subsection>
     </Section>
 
-    <Section title="simplified-viewer-audiobook"
+    <Section title="simplified-viewer-pdf"
              tableOfContents="false">
       <Subsection title="Issues">
         <Subsection title="Activity Listeners"
                     id="191f0594-266f-483b-bd7b-5acf4c73b44b"
                     type="issue">
           <Paragraph>
-            Due to the design of the Audio Book API, the hosting Activity must communicate with Fragments using
-            old-style callback functions. This should be replaced with communcation via a ViewModel (the Audio Book
-            library predates ViewModels).
+            The hosting Activity must communicate with Fragments using old-style callback functions. This should be
+            replaced with communcation via a ViewModel (the PDF library predates ViewModels).
           </Paragraph>
           <Paragraph>
             Issue class: <Link target="ade6440a-e336-4ec5-9000-6a4c6fb64a4c">STYLE</Link>. Severity: Minor.
