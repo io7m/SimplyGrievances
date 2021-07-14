@@ -176,7 +176,7 @@
         <LinkExternal target="https://www.gtk.org/">GTK</LinkExternal>,
         <LinkExternal target="https://www.qt.io/">QT</LinkExternal>, various
         <LinkExternal target="https://en.wikipedia.org/wiki/.NET_Framework">.NET</LinkExternal>
-        UI systems, and so on. The main design flaw in this case is that the Android system is allowed to execute code
+        UI systems, and so on). The main design flaw in this case is that the Android system is allowed to execute code
         on the UI thread <Term type="term">before the user-scheduled UI code can run</Term>. Even on other systems that
         are allowed to invalidate UI elements in this manner, operations on invalid UI elements are simply treated as <Term type="term">
         no-ops
