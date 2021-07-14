@@ -2030,6 +2030,19 @@
             Issue class: <Link target="dac29d65-63f0-4a76-b4ce-5dcc88320a5d">OBSOLETE</Link>. Severity: Minor.
           </Paragraph>
         </Subsection>
+        <Subsection title="Incorrect Log Severities"
+                    type="issue"
+                    id="f8108476-8749-44ab-ae5f-adcf2ba88b66">
+          <Paragraph>
+            The application logs too many messages at <Term type="constant">ERROR</Term> severity rather than something
+            like <Term type="constant">WARN</Term> or <Term type="constant">DEBUG</Term> severity. The problem is that
+            all messages of <Term type="constant">ERROR</Term> severity or above end up being sent to Crashlytics. This
+            results in lots of events logged in Crashlytics for transient errors such as DNS lookup failures.
+          </Paragraph>
+          <Paragraph>
+            Issue class: <Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</Link>. Severity: Minor.
+          </Paragraph>
+        </Subsection>
       </Subsection>
       <Subsection title="Module Link">
         <Paragraph>

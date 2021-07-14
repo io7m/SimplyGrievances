@@ -583,6 +583,15 @@
    </s:Row>
    <s:Row>
       <s:Cell type="cellIssue">
+         <s:Link target="f8108476-8749-44ab-ae5f-adcf2ba88b66">Incorrect Log Severities</s:Link>
+      </s:Cell>
+      <s:Cell type="cellClass">
+         <s:Link target="f454641e-95b4-4513-b856-6dce9952c6ba">BUG</s:Link>
+      </s:Cell>
+      <s:Cell type="cellSeverity">Minor</s:Cell>
+   </s:Row>
+   <s:Row>
+      <s:Cell type="cellIssue">
          <s:Link target="7a69c7c1-4c68-4811-b8e8-3ab6c2287839">Migrations Are Obsolete</s:Link>
       </s:Cell>
       <s:Cell type="cellClass">
