@@ -180,7 +180,7 @@
         on the UI thread <Term type="term">before the user-scheduled UI code can run</Term>. Even on other systems that
         are allowed to invalidate UI elements in this manner, operations on invalid UI elements are simply treated as <Term type="term">
         no-ops
-      </Term> and simply do not cause crashes.
+      </Term> and do not cause crashes.
       </Paragraph>
       <Paragraph>
         The primary method that we've started to use instead is to force events to be delivered onto the UI thread, and
